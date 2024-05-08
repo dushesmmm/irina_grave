@@ -1,7 +1,7 @@
 
 'use client'
 import classes from './Header.module.css'
-import logo from '../../../../public/images/logo.png'
+import logo from '../../../../public/images/logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -15,9 +15,9 @@ const Header = () => {
     }
 
   return (
-    <header className={classes.wrapper}>
+    <header className={`${classes.wrapper} ${isActive ? classes.height : ''}`}>
       <Link href='/' className={classes.imageWrapper}>
-        <Image src={logo} alt='логотип' width={341} height={158} />
+        <Image src={logo} alt='логотип' width={50} height={50} />
       </Link>
       <div className={classes.nav}>
       <p className={classes.navigation} onClick={handleInformation}>галерея</p>

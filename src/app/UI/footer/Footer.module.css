@@ -67,6 +67,11 @@
     font-size: calc(16px + 8 * ((100vw - 320px) / 1600));
 }
 
+.form img {
+    position: absolute;
+    left: 55%;
+}
+
 .contactUs {
     display: flex
 }
@@ -89,7 +94,7 @@
 }
 
 .links p {
-    width: 74%;
+    width: 79%;
     margin-top: 0px;
     margin-left: 5px;
     height: fit-content;

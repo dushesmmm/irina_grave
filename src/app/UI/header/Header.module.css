@@ -7,7 +7,13 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    mix-blend-mode: difference;
+    background-color: white;
+    transition: all 0.5s ease ;
+}
+
+.height {
+    padding-bottom: 100px;
+    transition: all 0.5s ease ;
 }
 
 .navigation {
@@ -25,39 +31,37 @@
 }
 
 .imageWrapper {
-
+    padding: 10px;
 }
 
 .navigation:nth-last-child(1) {
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .nav p {
-    margin-left: 20%;
+    margin-left: 50%;
     padding: 0;
     cursor: pointer;
-    color: rgb(183 183 183);
-    filter: invert(1);
+    color: rgb(0, 0, 0);
 }
 
 .nav a {
-    color: rgb(183 183 183);
-    filter: invert(1);
+    color: rgb(0, 0, 0);
 }
 
 .dropdownMenu {
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 35.9%;
-    top: 50%;
+    left: 52%;
+    top: 100%;
     visibility: hidden;
     opacity: 0;
     transition: all 0.5s ease;
 }
 
 .open {
-    top: 60%;
+    top: 41px;
     transition: all 0.5s ease;
     visibility: visible;
     opacity: 1;
@@ -66,8 +70,7 @@
 
 .dropdownLink {
     margin-top: 10px;
-    color: rgb(183 183 183);
-    filter: invert(1);
+    color: rgb(0, 0, 0);
     font-weight: 300;
     font-size: calc(12px + 8 * ((100vw - 320px) / 1600));
 }

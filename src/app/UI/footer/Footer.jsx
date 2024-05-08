@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './Footer.module.css'
-import logo from '../../../../public/images/footerlogo.png'
+import logo from '../../../../public/images/footerlogo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 

@@ -1,47 +1,3 @@
-.wrapper {
-  padding-left: 20%;
-  padding-right: 20%;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  margin-top: 100px;
-}
-
-.wrapper img {
-  height: 82%;
-  margin-left: 30px;
-  filter: grayscale(1);
-}
-
-.wrapper img:hover {
-  filter: grayscale(0);
-  transition: all 1s ease;
-}
-
-.text {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 475px;
-  text-align: justify;
-  font-size: calc(14px + 8 * ((100vw - 320px) / 1600));
-  font-weight: 300;
-}
-
-.text p {
-  padding: 0;
-  margin: 0;
-}
-
-.text a {
-  align-self: flex-end;
-  margin-top: 20px;
-  text-decoration: none;
-  color: black;
-  border-bottom: 1px solid black;
-  font-size: calc(14px + 8 * ((100vw - 320px) / 1600));
-}
-
 .banner {
   font-family: var(--font-playfair);
   color: white;
@@ -62,4 +18,105 @@
 .banner p {
   margin: 0 50px;
   text-align: justify;
+}
+
+.galleryContainer img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.galleryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 100px);
+  height: 110vh;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #232323;
+  padding-top: 50px;
+}
+
+.galleryContainer img {
+
+}
+
+.descriptionSection {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.descriptionSection h1 {
+  font-weight: 400;
+  font-size: 80px;
+  font-family: var(--font-playfair);
+  margin: 0;
+  color: white;
+}
+
+.descriptionSection p  {
+  font-weight: 300;
+  font-size: calc(14px + 8 * ((100vw - 320px) / 1600));
+  margin-top: 150px;
+  text-align: justify;
+  color: white;
+}
+
+.bottomSection {
+  width: 100%;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.smallImagesContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.smallImage {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.smallImage:last-child {
+  margin-right: 0;
+}
+
+.highlighted {
+  filter: grayscale(1);
+  transition: all 0.5s ease;
+}
+
+.mainImage {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.title,
+.description {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: calc(14px + 8 * ((100vw - 320px) / 1600));
+  cursor: pointer;
 }
