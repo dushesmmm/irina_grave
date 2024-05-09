@@ -1,0 +1,16 @@
+.wrapper {
+    background-color: #232323;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper p {
+    color: white;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 96px;
+    font-family: var(--font-playfair);
+    margin: 0;
+}

@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 
-const Header = () => {
+const Header = ({dark}) => {
     const [isActive, setAcvtive] = useState(false);
 
     const handleInformation = () => {
@@ -15,22 +15,22 @@ const Header = () => {
     }
 
   return (
-    <header className={`${classes.wrapper} ${isActive ? classes.height : ''}`}>
+    <header className={`${classes.wrapper} ${isActive ? classes.height : ''} ${dark ? classes.dark : ''}`}>
       <Link href='/' className={classes.imageWrapper}>
-        <Image src={logo} alt='логотип' width={50} height={50} />
+        <Image src={logo} alt='логотип' width={50} height={50} className={`${dark ? classes.invert : ''}`} />
       </Link>
       <div className={classes.nav}>
-      <p className={classes.navigation} onClick={handleInformation}>галерея</p>
-        <div className={`${classes.dropdownMenu} ${isActive ? classes.open : ''}`}>
-            <Link href='' className={classes.dropdownLink}>жилые объекты</Link>
-            <Link href='' className={classes.dropdownLink}>коммерческие проекты</Link>
-            <Link href='' className={classes.dropdownLink}>объекты в работе</Link>
-            <Link href='' className={classes.dropdownLink}>extra</Link>
+      <p className={`${classes.navigation} ${dark ? classes.invert : ''}`} onClick={handleInformation}>галерея</p>
+        <div className={`${classes.dropdownMenu} ${isActive ? classes.open : ''} ${dark ? classes.invert : ''}`}>
+            <Link href='' className={`${classes.dropdownLink} ${dark ? classes.white : ''}`}>жилые объекты</Link>
+            <Link href='' className={`${classes.dropdownLink} ${dark ? classes.white : ''}`}>коммерческие проекты</Link>
+            <Link href='' className={`${classes.dropdownLink} ${dark ? classes.white : ''}`}>объекты в работе</Link>
+            <Link href='' className={`${classes.dropdownLink} ${dark ? classes.white : ''}`}>extra</Link>
         </div>
-      <Link href='' className={classes.navigation}>авторство</Link>
-      <Link href='' className={classes.navigation}>о студии</Link>
-      <Link href='' className={classes.navigation}>контакты</Link>
-      <Link href='' className={classes.navigation}>en/ru</Link>
+      <Link href='/objects' className={`${classes.navigation} ${dark ? classes.invert : ''}`}>авторство</Link>
+      <Link href='/about' className={`${classes.navigation} ${dark ? classes.invert : ''}`}>о студии</Link>
+      <Link href='' className={`${classes.navigation} ${dark ? classes.invert : ''}`}>контакты</Link>
+      <Link href='' className={`${classes.navigation} ${dark ? classes.invert : ''}`}>en/ru</Link>
       </div>
     </header>
   )

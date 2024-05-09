@@ -1,10 +1,10 @@
-import React from 'react'
-import photo from '../../../../public/images/mainPagePhoto.jpeg'
-import classes from './PhotoDescription.module.css'
-import Link from 'next/link'
-import Image from 'next/image'
+import React from 'react';
+import photo from '../../../../public/images/mainPagePhoto.jpeg';
+import classes from './PhotoDescription.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const PhotoDescription = () => {
+const PhotoDescription = ({ showLink }) => {
   return (
     <div className={classes.wrapper}>
      <div className={classes.text}>
@@ -20,11 +20,11 @@ const PhotoDescription = () => {
         цветовую гамму, делая фокус на людях, живущих в созданных мною интерьерах. <br />
         <br /> специфика образа жизни конкретного заказчика. Ирина ведет авторский надзор
       </p>
-      <Link href="">подробнее о студии</Link>
+      {showLink && <Link href="/about">подробнее о студии</Link>}
      </div>
     <Image src={photo} alt="фотография" width={475} height={815} />
   </div>
-  )
+  );
 }
 
 export default PhotoDescription;
