@@ -2,8 +2,6 @@ import { Inter } from "next/font/google";
 import Header from "../UI/header/Header";
 import Footer from "../UI/footer/Footer";
 import { Playfair_Display_SC } from "next/font/google";
-import PhotoDescription from "../UI/PhotoDescription/PhotoDescription";
-import Brands from "../UI/brands/Brands";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 

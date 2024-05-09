@@ -29,7 +29,7 @@ const Header = ({dark}) => {
         </div>
       <Link href='/objects' className={`${classes.navigation} ${dark ? classes.invert : ''}`}>авторство</Link>
       <Link href='/about' className={`${classes.navigation} ${dark ? classes.invert : ''}`}>о студии</Link>
-      <Link href='' className={`${classes.navigation} ${dark ? classes.invert : ''}`}>контакты</Link>
+      <Link href='/contacts' className={`${classes.navigation} ${dark ? classes.invert : ''}`}>контакты</Link>
       <Link href='' className={`${classes.navigation} ${dark ? classes.invert : ''}`}>en/ru</Link>
       </div>
     </header>

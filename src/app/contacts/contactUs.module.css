@@ -1,0 +1,20 @@
+.banner {
+    border: 40px solid #232323;
+    background-image: url(https://s3-alpha-sig.figma.com/img/e8d4/7b09/19e31f3852d49c05dba8e31e9a4c8df3?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=G2ku4kkhQxH6JEQvJh8GqHeYcv8W7icQZ1x7wDUjxn5kvgj-ibRTvGVGhmmh~zjjJ7jtRC1YhI7ztXwn59Avn-aP8j8Ijt9zVKeigJM6qzJQcUDwX98hiNyJOON3Em4o01hDglqiifmIfhaUKlrD3r-tr3X6vCLmnedDTvWwAcohWIRnnf11RrsUWOyKcj5jwvL3SVqqbv1dmVIS3W80GqYXewS1wFwQOas6jOKxmy5XRhoh3jUbyEEFcqxKybOLaEvPFyYWv7SVe2b1n7hLAQjRbmmmDmGKSJeYimljj6EYjaIxNj7WbO82siinwUIM9VInGAEhsMp13PVHYUpzjg__);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    height: 700px;
+    background-size: 300%;
+}
+
+.banner p {
+    font-family: var(--font-playfair);
+    font-weight: 400;
+    font-size: 48px;
+    margin: 0;
+    text-align: justify;
+    margin-left: 50px;
+    margin-right: 50px;
+}
