@@ -27,7 +27,8 @@ const Footer = () => {
     }
   
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault()
     try {
       const data = {
         fullName: fullName,
@@ -36,10 +37,11 @@ const Footer = () => {
       };
 
       await axios.post('http://176.112.255.189:8080/submit-form', data);
-      console.log('готово')
+      alert(data)
     } catch(error) {
-      console.log(error)
+      alert(error)
     }
+
   };
 
   return (
