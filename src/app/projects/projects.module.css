@@ -1,0 +1,60 @@
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  
+  .project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 120px;
+    width: 100%;
+  }
+  
+  .text {
+    flex: 1;
+    padding-right: 50px; 
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text h2 {
+    font-weight: 400;
+    font-size: 64px;
+    text-align: justify;
+    font-family: var(--font-playfair);
+    margin-top: 0;
+  }
+
+  .text p {
+    font-weight: 300;
+    font-size: 24px;
+    text-align: justify;
+  }
+
+  .text a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+    font-size: calc(14px + 8 * ((100vw - 320px) / 1600));
+    margin-top: 20px;
+    width: fit-content;
+  }
+  
+  .image {
+    max-width: 55%;
+    height: auto;
+  }
+  
+  .odd .text {
+    order: 2;
+    padding-left: 50px;
+  }
+  
+  .odd .image {
+    order: 1; 
+  }
