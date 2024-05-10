@@ -17,9 +17,12 @@
     flex: 1;
     padding-right: 50px; 
     width: 40%;
-    height: 100%;
     display: flex;
     flex-direction: column;
+    align-self: first baseline;
+    position: sticky;
+    margin-top: -20px;
+    top: 60px;
   }
 
   .text h2 {
@@ -57,4 +60,71 @@
   
   .odd .image {
     order: 1; 
+  }
+
+  .doubleWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+
+  .doubleProjects {
+    width: 728px;
+    height: 700;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .two {
+    width: 728px;
+    height: 488px;
+    max-width: none;
+    transition: all 1s ease;
+  }
+
+  .two:hover {
+    filter: brightness(67%);
+  }
+
+  .two:hover ~ .description {
+    transition: all 1s ease;
+    opacity: 1;
+  }
+
+  .title {
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    font-family: var(--font-playfair);
+    text-decoration: none;
+  }
+
+  .link {
+    text-decoration: none;
+    color: black;
+  }
+
+  .category {
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    color: #9C9C9C
+  }
+
+  .description {
+    color: white;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: absolute;
+    top: 24%;
+
+    opacity: 0;
+
+    transition: all 1s ease;
   }
