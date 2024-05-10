@@ -27,7 +27,7 @@
 
   .text h2 {
     font-weight: 400;
-    font-size: 64px;
+    font-size: 55px;
     text-align: justify;
     font-family: var(--font-playfair);
     margin-top: 0;
@@ -35,7 +35,7 @@
 
   .text p {
     font-weight: 300;
-    font-size: 24px;
+    font-size: 16px;
     text-align: justify;
   }
 
@@ -67,8 +67,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
   }
 
   .doubleProjects {
@@ -127,4 +127,6 @@
     opacity: 0;
 
     transition: all 1s ease;
+    overflow: hidden;
+    pointer-events: none;
   }
