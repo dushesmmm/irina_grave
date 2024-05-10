@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import classes from './page.module.css';
 import Image from 'next/image';
+import Header from './UI/header/Header';
 
 import mainImage1 from '../../public/images/main image 1.jpg';
 import mainImage2 from '../../public/images/main image 2.jpg';
@@ -12,6 +13,7 @@ import mainImage5 from '../../public/images/main image 5.jpg';
 import mainImage6 from '../../public/images/main image 6.jpg';
 
 import Brands from './UI/brands/Brands';
+import PhotoDescription from './UI/PhotoDescription/PhotoDescription';
 
 const MainImage = ({ image, currentIndex, targetIndex }) => {
   const isVisible = currentIndex === targetIndex;
@@ -63,8 +65,8 @@ export default function Home() {
   
   const [currentIndex, setCurrentIndex] = useState(0);
   const [targetIndex, setTargetIndex] = useState(0);
-  const images = [mainImage1, mainImage2, mainImage3, mainImage4, mainImage5, mainImage6];
   const [startIndex, setStartIndex] = useState(0);
+  const images = [mainImage1, mainImage2, mainImage3, mainImage4, mainImage5, mainImage6];
 
   const descriptions = [
     'Этот проект поражает масштабом: два уровня, 470 кв. метров и более 1000 кв. метров — площадь террас. Дизайнер Ирина Граве детально, с любовью проработала обширное пространство, показав высокий уровень мастерства.',
@@ -121,10 +123,12 @@ export default function Home() {
 
   return (
     <div>
+      <Header />
+      <PhotoDescription showLink={true} />
       <div className={classes.banner}>
         <p>
           "МНЕ КАЖЕТСЯ, ЧТО ХОРОШИЙ ВКУС — ЭТО ВСЕ-ТАКИ ВТОРОСТЕПЕННАЯ ВЕЩЬ. ГЛАВНОЕ — СУПЕРСИЛА ВИДЕТЬ
-          ПРЕКРАСНОЕ В ОБЫДЕННОМ ИЛИ ДАЖЕ В НЕПРЕКРАСНОМ.”
+          ПРЕКРАСНОЕ В ОБЫДЕННОМ ИЛИ ДАЖЕ В НЕПРЕКРАСНОМ."
         </p>
       </div>
       <Brands />

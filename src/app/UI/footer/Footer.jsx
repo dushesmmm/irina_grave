@@ -1,10 +1,46 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+
 import React from 'react'
 import classes from './Footer.module.css'
 import logo from '../../../../public/images/footerlogo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import axios from 'axios'
+
 const Footer = () => {
+
+  const [fullName, setFullName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+
+    const handleFullNameChange = (e) => {
+      setFullName(e.target.value)
+    }
+    const handleEmailChange = (e) => {
+      setEmail(e.target.value)
+    }
+    const handlePhoneChange = (e) => {
+      setPhone(e.target.value)
+    }
+  
+
+  const handleSubmit = async () => {
+    try {
+      const data = {
+        fullName: fullName,
+        email: email,
+        phone: phone
+      };
+
+      await axios.post('http://176.112.255.189:8080/submit-form', data);
+      console.log('готово')
+    } catch(error) {
+      console.log(error)
+    }
+  };
 
   return (
     <div className={classes.wrapper}>
@@ -15,10 +51,10 @@ const Footer = () => {
          <div className={classes.form}>
             <form action="">
                 <p>связь с нами:</p>
-                <input type="name" placeholder='Как Вас зовут?' />
-                <input type="email" placeholder='Ваш e-mail' />
-                <input type="tel" placeholder='Ваш номер телефона' />
-                <button type="submit">отправить</button>
+                <input type="name" placeholder='Как Вас зовут?' value={fullName} onChange={handleFullNameChange}/>
+                <input type="email" placeholder='Ваш e-mail' value={email} onChange={handleEmailChange} />
+                <input type="tel" placeholder='Ваш номер телефона' value={phone} onChange={handlePhoneChange} />
+                <button type="submit" onClick={handleSubmit}>отправить</button>
             </form>
             <Image src={logo} alt='логотип' />
         </div>

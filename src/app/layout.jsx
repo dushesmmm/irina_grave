@@ -45,8 +45,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ru">
       <body className={`${inter.variable} ${playfair.variable}`}>
-        <Header />
-        <PhotoDescription showLink={true} />
           {children}
         <Footer />
         </body>

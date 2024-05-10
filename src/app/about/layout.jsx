@@ -41,16 +41,14 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function about({ children }) {
   return (
-    <html lang='ru'>
-      <body className={`${inter.variable} ${playfair.variable}`}>
+    <div>
       <Header />
       <PhotoDescription showLink={false} />
       <Brands />
         {children}
-      <Footer />
-      </body>
-    </html>
+
+  </div>
   );
 }

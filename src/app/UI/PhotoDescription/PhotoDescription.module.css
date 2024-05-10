@@ -11,6 +11,7 @@
     height: 82%;
     margin-left: 30px;
     filter: grayscale(1);
+    transition: all 1s ease;
   }
   
   .wrapper img:hover {
