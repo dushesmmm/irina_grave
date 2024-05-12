@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import classes from "./gallery.module.css";
+import classes from "./Gallery.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
