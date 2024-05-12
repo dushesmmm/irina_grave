@@ -5,15 +5,16 @@ import classes from './page.module.css';
 import Image from 'next/image';
 import Header from './UI/header/Header';
 
-import mainImage1 from '../../public/images/main image 1.jpg';
-import mainImage2 from '../../public/images/main image 2.jpg';
-import mainImage3 from '../../public/images/main image 3.jpg';
-import mainImage4 from '../../public/images/main image 4.jpg';
-import mainImage5 from '../../public/images/main image 5.jpg';
-import mainImage6 from '../../public/images/main image 6.jpg';
+import mainImage1 from '../../public/images/main page/main image 1.jpg';
+import mainImage2 from '../../public/images/main page/main image 2.jpg';
+import mainImage3 from '../../public/images/main page/main image 3.jpg';
+import mainImage4 from '../../public/images/main page/main image 4.jpg';
+import mainImage5 from '../../public/images/main page/main image 5.jpg';
+import mainImage6 from '../../public/images/main page/main image 6.jpg';
 
 import Brands from './UI/brands/Brands';
 import PhotoDescription from './UI/PhotoDescription/PhotoDescription';
+import Link from 'next/link';
 
 const MainImage = ({ image, currentIndex, targetIndex }) => {
   const isVisible = currentIndex === targetIndex;
@@ -136,6 +137,7 @@ export default function Home() {
         <div className={classes.descriptionSection}>
           <Title titles={titles} currentIndex={currentIndex} targetIndex={targetIndex} />
           <Description descriptions={descriptions} currentIndex={currentIndex} targetIndex={targetIndex} />
+          <Link href='' />
           <div className={classes.bottomSection}>
             <SmallImages images={images} startIndex={startIndex} currentIndex={currentIndex} handleClick={handleImageClick} />
             <div className={classes.nav}>

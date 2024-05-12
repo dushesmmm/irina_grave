@@ -1,9 +1,62 @@
-  .wrapper {
+.wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 150px;
     margin-left: 40px;
     margin-right: 40px;
+  }
+  
+  .square {
+    display: flex;
+    margin-top: 100px;
+    position: absolute;
+    right: 40px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #dcdcdc;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+    cursor: pointer;
+  }
+  
+  .burger {
+    display: flex;
+    margin-top: 100px;
+    position: absolute;
+    right: 80px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #dcdcdc;
+    border: none;
+    justify-content: space-evenly;
+    flex-direction: column;
+    transition: all 1s ease;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 20px;
+    height: 4px;
+    background-color: white;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .active {
+    background-color: #9c9c9c;
+  }
+  
+  .square::after {
+    content: "+";
+    font-size: 50px;
+    margin-top: -8px;
+    color: white;
+    font-weight: 100;
+    pointer-events: none;
   }
   
   .project {
@@ -15,7 +68,7 @@
   
   .text {
     flex: 1;
-    padding-right: 50px; 
+    padding-right: 50px;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -24,7 +77,7 @@
     margin-top: -20px;
     top: 60px;
   }
-
+  
   .text h2 {
     font-weight: 400;
     font-size: 55px;
@@ -32,13 +85,13 @@
     font-family: var(--font-playfair);
     margin-top: 0;
   }
-
+  
   .text p {
     font-weight: 300;
     font-size: 16px;
     text-align: justify;
   }
-
+  
   .text a {
     text-decoration: none;
     color: black;
@@ -59,9 +112,9 @@
   }
   
   .odd .image {
-    order: 1; 
+    order: 1;
   }
-
+  
   .doubleWrapper {
     display: flex;
     flex-direction: row;
@@ -70,30 +123,30 @@
     margin-left: 100px;
     margin-right: 100px;
   }
-
+  
   .doubleProjects {
     width: 728px;
     height: 700;
     margin-bottom: 50px;
     position: relative;
   }
-
+  
   .two {
     width: 728px;
     height: 488px;
     max-width: none;
     transition: all 1s ease;
   }
-
+  
   .two:hover {
     filter: brightness(67%);
   }
-
+  
   .two:hover ~ .description {
     transition: all 1s ease;
     opacity: 1;
   }
-
+  
   .title {
     font-weight: 400;
     font-size: 40px;
@@ -101,19 +154,19 @@
     font-family: var(--font-playfair);
     text-decoration: none;
   }
-
+  
   .link {
     text-decoration: none;
     color: black;
   }
-
+  
   .category {
     font-weight: 300;
     font-size: 20px;
     text-align: center;
-    color: #9C9C9C
+    color: #9c9c9c;
   }
-
+  
   .description {
     color: white;
     font-weight: 300;
@@ -123,10 +176,11 @@
     margin-right: 10%;
     position: absolute;
     top: 24%;
-
+  
     opacity: 0;
-
+  
     transition: all 1s ease;
     overflow: hidden;
     pointer-events: none;
   }
+  
