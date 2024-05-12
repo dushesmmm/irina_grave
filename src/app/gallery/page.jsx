@@ -25,9 +25,15 @@ const galleryPage = () => {
       <div className={classes.block}>
         <Image src={image1} alt='изображение 1' />
       </div>
-      <div className={classes.block}><Image src={image2} alt='изображение 2' /></div>
-      <div className={classes.block}><Image src={image3} alt='изображение 3' /></div>
-      <div className={classes.block}><Image src={image4} alt='изображение 4' /></div>
+      <div className={classes.block}>
+        <Image src={image2} alt='изображение 2' />
+      </div>
+      <div className={classes.block}>
+        <Image src={image3} alt='изображение 3' />
+      </div>
+      <div className={classes.block}>
+        <Image src={image4} alt='изображение 4' />
+      </div>
       <div className={classes.block}>
         <Link href='/coming-soon'>коммерческие объекты</Link>
         <p>
@@ -37,18 +43,24 @@ const galleryPage = () => {
           мастерства. 
         </p>
       </div>
-      <div className={classes.block}><Image src={image5} alt='изображение 5' /></div>
       <div className={classes.block}>
-      <Link href='/coming-soon'>коммерческие объекты</Link>
+        <Image src={image5} alt='изображение 5' />
+      </div>
+      <div className={classes.block}>
+        <Link href='/design-in-progress'>объекты в работе</Link>
         <p>
           Этот проект поражает масштабом: два уровня, 470 кв. метров и более
           1000 кв. метров — площадь террас. Дизайнер Ирина Граве детально, с
           любовью проработала обширное пространство, показав высокий уровень
           мастерства. 
         </p>
-        <Link href='/extra' className={classes.last}>extra</Link>
+        <Link href='/extra' className={classes.last}>
+          extra
+        </Link>
       </div>
-      <div className={classes.block}><Image src={image6} alt='изображение 6' /></div>
+      <div className={classes.block}>
+        <Image src={image6} alt='изображение 6' />
+      </div>
     </div>
   );
 };

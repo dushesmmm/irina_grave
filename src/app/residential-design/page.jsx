@@ -1,5 +1,5 @@
 import React from "react";
-import Gallery from "../UI/gallery/Gallery";
+import Gallery from "../../app/UI/gallery/Gallery";
 
 import image1 from "../../../public/images/residential design/residential design 1/project image 1.jpg";
 import image2 from "../../../public/images/residential design/residential design 2/project image 1.jpg";
