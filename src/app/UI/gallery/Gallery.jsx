@@ -44,7 +44,7 @@ const Gallery = ({projects}) => {
               <div className={classes.text}>
                 <h2>{project.title}</h2>
                 <p>{project.description}</p>
-                <Link href={`/residential-design/project/${project.id}`}>посмотреть проект</Link>
+                <Link href={`${project.name}`}>посмотреть проект</Link>
               </div>
             )}
             {!showImagesOnly && (

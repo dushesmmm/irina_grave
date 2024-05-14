@@ -36,8 +36,6 @@ export default function about({ children }) {
   return (
     <div>
       <Header />
-      <PhotoDescription showLink={false} />
-      <Brands />
       {children}
     </div>
   );

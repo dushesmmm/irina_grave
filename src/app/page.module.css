@@ -51,14 +51,16 @@
   font-family: var(--font-playfair);
   margin: 0;
   color: white;
+  height: 300px;
 }
 
 .descriptionSection p  {
   font-weight: 300;
-  font-size: calc(14px + 8 * ((100vw - 320px) / 1600));
+  font-size: 16px;
   margin-top: 150px;
   text-align: justify;
   color: white;
+  height: 130px;
 }
 
 .bottomSection {

@@ -1,9 +1,8 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Header from "./UI/header/Header";
-import Footer from "./UI/footer/Footer";
+import "../app/globals.css";
+import Header from "../app/UI/header/Header";
+import Footer from "../app/UI/footer/Footer";
 import { Playfair_Display_SC } from "next/font/google";
-import PhotoDescription from "./UI/PhotoDescription/PhotoDescription";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 
@@ -41,12 +40,10 @@ const playfair = Playfair_Display_SC({
 //   },
 // };
 
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="ru" >
-      <body className={`${inter.variable} ${playfair.variable}`}>
+      <body className={`${inter.variable} ${playfair.variable}`} >
           {children}
         <Footer />
         </body>
