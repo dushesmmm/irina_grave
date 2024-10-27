@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 import { residentialDesignPages } from "../api/data/rdp";
 import Error from "next/error";
 import Image from "next/image";
@@ -12,6 +13,7 @@ import arrow from '../../../public/images/arrow-project-switcher.svg'
 import galleryArrow from '../../../public/images/gallery-arrow.svg'
 import galleryCross from '../../../public/images/gallery-cross.svg'
 
+
 const Pr = () => {
   const router = useRouter();
 
@@ -21,6 +23,18 @@ const Pr = () => {
     const parts = url.split("/");
     return parts[parts.length - 1];
   });
+
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setIsLargeScreen(window.innerWidth > 950);
+    };
+
+    updateScreenSize();
+    window.addEventListener("resize", updateScreenSize);
+    
+    return () => window.removeEventListener("resize", updateScreenSize);
+  }, []);
 
   const isNameValid = names.includes(router.query.name);
 
@@ -70,7 +84,6 @@ const Pr = () => {
     );
   };
 
-  // Function to navigate to the next project
   const goToNextProject = () => {
     const nextIndex = (index + 1) % residentialDesignPages.length;
     router.push({
@@ -79,7 +92,6 @@ const Pr = () => {
     });
   };
 
-  // Function to navigate to the previous project
   const goToPreviousProject = () => {
     const prevIndex =
       index === 0 ? residentialDesignPages.length - 1 : index - 1;
@@ -108,22 +120,44 @@ const Pr = () => {
               <p>{matchedObject.description}</p>
             </div>
           </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <div ref={sliderRef} className="keen-slider" style={{ width: 1300 }}>
-              {matchedObject.images.map((image, idx) => (
-                <div
-                  className="keen-slider__slide"
-                  key={idx}
-                  onClick={() => openModal(idx)}
-                >
-                  <Image
-                    src={image}
-                    alt={`Slide ${idx}`}
-                    className={`${classes.slideImage} `}
-                  />
-                </div>
-              ))}
-            </div>
+
+          {/* Условный рендеринг в зависимости от ширины экрана */}
+          <div style={{ display: "flex", justifyContent: "center" }} className={classes.keen}>
+            {isLargeScreen ? (
+              <div ref={sliderRef} className="keen-slider">
+                {matchedObject.images.map((image, idx) => (
+                  <div
+                    className="keen-slider__slide"
+                    key={idx}
+                    onClick={() => openModal(idx)}
+                  >
+                    <Image
+                      src={image}
+                      alt={`Slide ${idx}`}
+                      className={`${classes.slideImage} `}
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className={classes.imagesGrid}>
+                {matchedObject.images.map((image, idx) => (
+                  // <div
+                  //   
+                    
+                  //   className={classes.imageColumn}
+                  // >
+                    <Image
+                      src={image}
+                      key={idx}
+                      onClick={() => openModal(idx)}
+                      alt={`Slide ${idx}`}
+                      className={classes.imageItem}
+                    />
+                  // </div>
+                ))}
+              </div>
+            )}
           </div>
 
           {isModalOpen && (
@@ -142,26 +176,24 @@ const Pr = () => {
                   e.stopPropagation();
                   setIsModalOpen(false);
                 }}
-              >
-              </Image>
+              />
             </div>
           )}
 
-          {/* Next and Previous Project Buttons */}
           <div className={classes.navigationButtons}>
             <div className={classes.prevProjectButton} onClick={goToPreviousProject}>
               <Image className={classes.arrowProjectButtonPrevious} src={arrow} />
               <div className={classes.projectButtonText}>
-              <div >{residentialDesignPages[(index - 1 + residentialDesignPages.length) % residentialDesignPages.length].title}</div>
-              <div>Предыдущий проект</div>
+                <div>{residentialDesignPages[(index - 1 + residentialDesignPages.length) % residentialDesignPages.length].title}</div>
+                <div>Предыдущий проект</div>
               </div>
             </div>
             <div className={classes.nextProjectButton} onClick={goToNextProject}>
-             <Image className={classes.arrowProjectButtonNext} src={arrow} />
+              <Image className={classes.arrowProjectButtonNext} src={arrow} />
               <div className={classes.projectButtonText}>
                 <div>{residentialDesignPages[(index + 1) % residentialDesignPages.length].title}</div>
                 <div>Следующий проект</div>
-             </div>
+              </div>
             </div>
           </div>
         </>

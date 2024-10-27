@@ -43,6 +43,9 @@ const galleryPage = () => {
       <div className={classes.block}>
         <Image src={image5} alt='изображение 5' />
       </div>
+      <div className={classes.mobileBlock}>
+        <Image src={image7} alt='изображение 6' />
+      </div>
       <div className={classes.block}>
         <Link href='/extra'>extra</Link>
         <p className={classes.centered}>
@@ -54,9 +57,6 @@ const galleryPage = () => {
       </div>
       <div className={classes.block}>
         <Image src={image6} alt='изображение 6' />
-      </div>
-      <div className={classes.mobileBlock}>
-        <Image src={image7} alt='изображение 6' />
       </div>
     </div>
   );

@@ -173,3 +173,178 @@
     text-wrap: balance;
     color: black;
   }
+
+  .imagesGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100% !important;
+    justify-content: space-evenly;
+  }
+
+  .imagesGrid img {
+    width: 40vw;
+    height: auto;
+    cursor: pointer;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+
+  .keen div:nth-child(1) {
+    width: 1300px;
+  }
+
+  @media screen and (max-width: 1600px) {
+  .navigationButtons {
+    justify-content: space-between;
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+  .mainImage {
+    width: 1200px;
+  }
+  .mainDescription p {
+    width: 1200px;
+  }
+  .keen div:nth-child(1) {
+    width: 1200px;
+  }
+  .nextButton {
+    right: 1%;
+  }
+  .closeButton {
+    right: 1%;
+  }
+  .prevButton {
+    left: 1%;
+  }
+}
+
+  @media screen and (max-width: 1350px) {
+  .navigationButtons {
+    justify-content: space-between;
+    margin-right: 60px;
+    margin-left: 60px;
+  }
+  .mainImage {
+    width: 1100px;
+  }
+  .mainDescription p {
+    width: 1100px;
+  }
+  .keen div:nth-child(1) {
+    width: 1100px;
+  }
+  .title {
+    font-size: 82px;
+  }
+}
+  @media screen and (max-width: 1165px) {
+  .navigationButtons {
+    justify-content: space-between;
+    margin-right: 70px;
+    margin-left: 70px;
+  }
+  .mainImage {
+    width: 1000px;
+  }
+  .mainDescription p {
+    width: 1000px;
+  }
+  .keen div:nth-child(1) {
+    width: 1000px;
+  }
+  .title {
+    font-size: 78px;
+  }
+}
+  @media screen and (max-width: 1055px) {
+  .navigationButtons {
+    justify-content: space-between;
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+  .mainImage {
+    width: 900px;
+  }
+  .mainDescription p {
+    width: 900px;
+  }
+  .keen div:nth-child(1) {
+    width: 900px;
+  }
+  .title {
+    font-size: 68px;
+    margin-top: 100px;
+  }
+  .wrapper {
+    margin: 0;
+  }
+  .slideImage {
+    width: 150px;
+  }
+}
+
+  @media screen and (max-width: 950px) {
+  .navigationButtons {
+    justify-content: space-between;
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+  .mainImage {
+    width: 600px;
+  }
+  .mainDescription p {
+    width: 600px;
+    margin-top: 20px;
+  }
+  .title {
+    font-size: 48px;
+    margin-top: 100px;
+  }
+  .wrapper {
+    margin: 0;
+  }
+  .slideImage {
+    width: 100px;
+  }
+  .nextButton {
+    right: 15%;
+    bottom: 5%;
+  }
+  .prevButton {
+    left: 15%;
+    bottom: 5%;
+  }
+}
+
+  @media screen and (max-width: 550px) {
+  .navigationButtons {
+    justify-content: space-between;
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+  .mainImage {
+    width: 400px;
+  }
+  .mainDescription p {
+    width: 400px;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  .title {
+    font-size: 31px;
+  }
+  .category {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .projectButtonText :first-child {
+    font-size: 12px;
+  }
+  .projectButtonText {
+    font-size: 10px;
+  }
+}
