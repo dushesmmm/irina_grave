@@ -88,7 +88,7 @@
   
   .text p {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 20px;
     text-align: justify;
   }
   
@@ -136,6 +136,7 @@
     height: 488px;
     max-width: none;
     transition: all 1s ease;
+    object-fit: cover;
   }
   
   .two:hover {

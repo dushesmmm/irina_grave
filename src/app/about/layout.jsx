@@ -35,7 +35,7 @@ export const metadata = {
 export default function about({ children }) {
   return (
     <div>
-      <Header />
+      <Header dark={false} />
       {children}
     </div>
   );

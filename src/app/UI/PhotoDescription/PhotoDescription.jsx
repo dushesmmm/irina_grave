@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const PhotoDescription = ({ showLink }) => {
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} >
      <div className={classes.text}>
       <p>
         Ирина Граве - дипломированный дизайнер, с отличием окончила школу «Детали». Занимается дизайном

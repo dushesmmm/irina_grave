@@ -55,7 +55,7 @@ const Gallery = ({projects}) => {
               />
             )}
             {showImagesOnly && (
-              <Link className={classes.link} href='/'>
+              <Link className={classes.link} href={`${project.name}`}>
                 <Image
                   src={project.image}
                   alt={project.title}
