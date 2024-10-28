@@ -311,11 +311,11 @@
   }
   .nextButton {
     right: 15%;
-    bottom: 5%;
+    bottom: 15%;
   }
   .prevButton {
     left: 15%;
-    bottom: 5%;
+    bottom: 15%;
   }
 }
 
