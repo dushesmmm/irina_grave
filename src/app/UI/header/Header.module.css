@@ -1,6 +1,6 @@
 .wrapper {
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
@@ -14,11 +14,11 @@
 }
 
 .dark {
-    background-color: #232323;
+    background-color: #232323 !important;
 }
 
 .invert {
-    filter: invert(1);
+    filter: invert(1) !important;
 }
 
 .white {
@@ -35,6 +35,10 @@
     font-weight: 300;
     font-size: calc(12px + 8 * ((100vw - 320px) / 1600));
     color: black;
+}
+
+.grey {
+    background-color: #232323 !important;
 }
 
 .nav {
@@ -68,4 +72,86 @@
     border-bottom: 1px solid black;
 }
 
-
+@media screen and (max-width: 1500px) {
+    .navigation:nth-child(1) {
+        margin-left: 40%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .navigation:nth-child(1) {
+        margin-left: 30%;
+    }
+}
+@media screen and (max-width: 765px) {
+    .navigation:nth-child(1) {
+        margin-left: 20%;
+    }
+}
+  
+.nav {
+    display: flex;
+}
+  
+.navigation {
+    color: black;
+    text-decoration: none;
+}
+  
+.burger {
+    display: none;
+    cursor: pointer;
+}
+  
+@media (max-width: 639px) {
+    .wrapper {
+        opacity: 1;
+        backdrop-filter: unset;
+        background-blend-mode: unset;
+        background-color: #ffffff;
+    }
+    .nav {
+      display: flex;
+      align-items: start !important;
+      position: absolute;
+      top: 70px;
+      left: -100vw;
+      flex-direction: column;
+      align-items: center;
+      backdrop-filter: blur(7px);
+      background-color: #ffffff;
+      transition: all ease 1s;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: calc(100vw - 40px);
+      height: calc(100vh - 70px);
+      justify-content: unset;
+    }
+    .nav.active {
+      display: flex;
+      position: absolute;
+      top: 67px;
+      left: 0;
+      transition: all ease 1s;
+      height: calc(100vh - 70px);
+      overflow: hidden;
+      align-items: flex-start;
+      z-index: 9;
+    }
+    .active {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        transition: all ease 1s;
+    }
+    .navigation:nth-child(1) {
+        margin-left: 0;
+    }
+    .navigation {
+        margin-top: 5px;
+        margin-bottom: 45px;
+        font-size: 15px;
+    }
+    .wrapper {
+        width: 100vw;
+    }
+}
