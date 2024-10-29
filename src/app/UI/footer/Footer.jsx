@@ -97,7 +97,7 @@ const Footer = () => {
           <Link href="https://www.instagram.com/irina_grave">instagram*</Link><p>&#8594;</p>
         </div>
         <div className={classes.mobileImage}>
-          <Image src={logo} alt="логотип" />
+          <Image src={logo} alt="логотип"  quality={100}/>
           <p>© 2024 Irina Grave All rights Reserved</p>
         </div>
       </div>

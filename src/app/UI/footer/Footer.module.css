@@ -52,6 +52,7 @@
    border-bottom: 1px solid #8F8F8F;
    margin-bottom: 10px;
    padding: 10px;
+   border-radius: 0 !important;
 }
 
 .form input:focus-visible {
@@ -196,15 +197,16 @@
         text-align: center;
         width: 150px;
         border-bottom: none;
+        font-size: 12px;
     }
     .links a:first-child {
-        margin-top: 110px;
+        margin-top: 0px;
     }
     .form img {
         display: none;
     }
     .form form {
-        width: calc(100vw - 100px);
+        width: calc(100vw - 50px);
     }
     .text p {
         text-align: center;
@@ -225,7 +227,7 @@
         flex-direction: column;
     }
     .mobileImage img {
-        width: 400px;
+        width: 300px;
         height: auto;
     }
     .mobileImage p {
@@ -235,5 +237,14 @@
         font-weight: 300;
         color: #8F8F8F;
         margin: 0;
+    }
+    .wrapper div:first-child {
+        border-bottom: 0px !important;
+    }
+    .wrapper {
+        margin: 25px;
+    }
+    .form form button {
+        margin-top: 10px;
     }
 }
