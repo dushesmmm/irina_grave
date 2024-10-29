@@ -94,7 +94,11 @@ const Footer = () => {
         <div className={classes.links}>
           <Link href="mailto:info@irinagrave.com?subject=Заявка с сайта">info@irinagrave.com</Link><p>&#8594;</p>
           <Link href="tel:88005553535">8 (800) 555-35-35</Link><p>&#8594;</p>
-          <Link href="https://www.instagram.com/irina_grave">instagram</Link><p>&#8594;</p>
+          <Link href="https://www.instagram.com/irina_grave">instagram*</Link><p>&#8594;</p>
+        </div>
+        <div className={classes.mobileImage}>
+          <Image src={logo} alt="логотип" />
+          <p>© 2024 Irina Grave All rights Reserved</p>
         </div>
       </div>
     </div>

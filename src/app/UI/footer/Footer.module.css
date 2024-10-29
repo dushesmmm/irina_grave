@@ -110,3 +110,130 @@
     width: fit-content;
     height: fit-content;
 }
+
+.mobileImage {
+    display: none;
+}
+
+@media (max-width: 1745px) {
+    .links p {
+        width: 75%;
+    }
+}
+@media (max-width: 1455px) {
+    .links p {
+        width: 63%;
+    }
+    .links {
+        width: 60%;
+    }
+    .form img {
+        width: 500px;
+        height: auto;
+        z-index: 0;
+    }
+}
+
+@media (max-width: 1140px) {
+    .links p {
+        width: 60%;
+    }
+    .contactUs p {
+        width: 50%;
+    }
+    .form img {
+        width: 400px;
+        height: auto;
+        z-index: 0;
+    }
+}
+
+@media (max-width: 910px) {
+    .contactUs p {
+        width: 30%;
+    }
+    .contactUs p:nth-child(1) {
+        width: 70%;
+    }
+    .form img {
+        width: 320px;
+    }
+}
+@media (max-width: 760px) {
+    .contactUs p {
+        width: 10%;
+    }
+    .contactUs p:nth-child(1) {
+        width: 100%;
+    }
+    .form img {
+        width: 280px;
+    }
+    .links {
+        width: 90%;
+    }
+}
+
+@media (max-width: 670px) {
+    .contactUs {
+        flex-direction: column;
+    }
+    .contactUs p:nth-child(1) {
+        display: none;
+    }
+    .links {
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+    }
+    .links p {
+        display: none;
+    }
+    .links a {
+        margin-bottom: 30px;
+        text-align: center;
+        width: 150px;
+        border-bottom: none;
+    }
+    .links a:first-child {
+        margin-top: 110px;
+    }
+    .form img {
+        display: none;
+    }
+    .form form {
+        width: calc(100vw - 100px);
+    }
+    .text p {
+        text-align: center;
+        font-size: 32px;
+        margin-top: 150px;
+    }
+    .text {
+        justify-content: center;
+    }
+    .form p {
+        font-size: 20px;
+    }
+    .mobileImage {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .mobileImage img {
+        width: 400px;
+        height: auto;
+    }
+    .mobileImage p {
+        width: 100%;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 300;
+        color: #8F8F8F;
+        margin: 0;
+    }
+}
