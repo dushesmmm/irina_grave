@@ -156,7 +156,6 @@ export default function Home() {
           <Links 
             currentIndex={currentIndex}
             tergetIndex={targetIndex}
-            // className={classes}
           />
           <div className={classes.bottomSection}>
             <div ref={sliderRef} className={classes.smallImagesContainer}>
