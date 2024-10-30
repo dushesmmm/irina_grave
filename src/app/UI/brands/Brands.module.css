@@ -6,3 +6,23 @@
     justify-content: space-between;
     padding: 100px;
   }
+
+  .brands img {
+    width: 23% !important;
+  }
+
+.brands :nth-child(8) {
+  display: none;
+}
+
+  @media (max-width: 700px ) {
+    .brands {
+      padding: 100px 20px;
+    }
+    .brands img {
+      width: 33% !important;
+    }
+    .brands :nth-child(8) {
+      display: flex;
+    }
+  }
