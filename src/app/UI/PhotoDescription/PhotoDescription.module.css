@@ -91,6 +91,7 @@
   }
   .text a {
     font-size: 15px;
+    margin-bottom: 30px;
   }
   .wrapper img {
     width: 230px !important;
