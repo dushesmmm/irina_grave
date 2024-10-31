@@ -288,14 +288,14 @@
   .descriptionSection h1 {
     font-size: 40px;
     height: 200px;
-    text-shadow: 0px 0px 20px black;
+    /* text-shadow: 0px 0px 20px black; */
   }
   .descriptionSection p {
     font-size: 15px;
-    text-shadow: 0px 0px 20px black;
+    /* text-shadow: 0px 0px 20px black; */
   }
   .links {
-    text-shadow: 0px 0px 20px black;
+    /* text-shadow: 0px 0px 20px black; */
     font-size: 15px;
   }
 }
