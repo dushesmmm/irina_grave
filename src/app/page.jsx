@@ -74,7 +74,7 @@ export default function Home() {
       );
     }, 10000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
