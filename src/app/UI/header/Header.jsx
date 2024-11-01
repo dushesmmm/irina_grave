@@ -6,6 +6,9 @@ import logo from "../../../../public/images/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import './Header.css'
+import { useTranslation } from "next-i18next";
+import about from "@/app/about/layout";
+import i18n from "@/pages/i18n";
 
 const Header = ({ dark }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,6 +30,13 @@ const Header = ({ dark }) => {
     setMenuOpen(!menuOpen);
   };
 
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = () => {
+    const newLanguage = i18n.language === 'en' ? 'ru' : 'en';
+    i18n.changeLanguage(newLanguage);
+  };
+
   return (
     <header className={`${classes.wrapper} ${dark ? classes.dark : ""}`}>
       <Link href='/' className={classes.imageWrapper}>
@@ -44,32 +54,29 @@ const Header = ({ dark }) => {
           href='/gallery'
           className={`${classes.navigation} ${dark ? classes.invert : ""}`}
         >
-          галерея
+          {t('gallery')}
         </Link>
         <Link
           href='/coming-soon'
           className={`${classes.navigation} ${dark ? classes.invert : ""}`}
         >
-          авторство
+          {t('authorship')}
         </Link>
         <Link
           href='/about'
           className={`${classes.navigation} ${dark ? classes.invert : ""}`}
         >
-          о студии
+          {t('about_us')}
         </Link>
         <Link
           href='/contacts'
           className={`${classes.navigation} ${dark ? classes.invert : ""}`}
         >
-          контакты
+          {t('contacts')}
         </Link>
-        <Link
-          href=''
-          className={`${classes.navigation} ${dark ? classes.invert : ""}`}
-        >
+        <div className={`${classes.navigation} ${dark ? classes.invert : ""}`} onClick={changeLanguage}>
           en/ru
-        </Link>
+        </div>
       </div>
     </header>
   );

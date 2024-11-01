@@ -4,6 +4,7 @@ import { useState } from "react";
 import classes from "./Gallery.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 const Gallery = ({projects}) => {
   const [showImagesOnly, setShowImagesOnly] = useState(false);
@@ -14,6 +15,8 @@ const Gallery = ({projects}) => {
   const notOnlyImages = () => {
     setShowImagesOnly(false);
   };
+
+  const { t } = useTranslation();
 
   return (
     <div>
@@ -42,9 +45,9 @@ const Gallery = ({projects}) => {
           >
             {!showImagesOnly && (
               <div className={classes.text}>
-                <h2>{project.title}</h2>
-                <p>{project.description}</p>
-                <Link href={`${project.name}`}>посмотреть проект</Link>
+                <h2>{t(`project${project.id}.title`)}</h2>
+                <p>{t(`project${project.id}.description`)}</p>
+                <Link href={project.name}>{t(`project${project.id}.linkText`)}</Link>
               </div>
             )}
             {!showImagesOnly && (
@@ -61,9 +64,9 @@ const Gallery = ({projects}) => {
                   alt={project.title}
                   className={classes.two}
                 />
-                <h2 className={classes.title}>{project.title}</h2>
-                <p className={classes.category}>{project.category}</p>
-                <p className={classes.description}>{project.description}</p>
+                <h2 className={classes.title}>{t(`project${project.id}.title`)}</h2>
+                <p className={classes.category}>{t(`project${project.id}.category`)}</p>
+                <p className={classes.description}>{t(`project${project.id}.description`)}</p>
               </Link>
             )}
           </div>

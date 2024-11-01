@@ -71,6 +71,10 @@
 .nav a:hover {
     border-bottom: 1px solid black;
 }
+.nav div:hover {
+    cursor: pointer;
+    border-bottom: 1px solid black;
+}
 
 @media screen and (max-width: 1500px) {
     .navigation:nth-child(1) {

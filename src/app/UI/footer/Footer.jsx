@@ -6,9 +6,11 @@ import classes from './Footer.module.css'
 import logo from '../../../../public/images/footerlogo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
-
+  const { t } = useTranslation()
+  
   const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
@@ -21,16 +23,16 @@ const Footer = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     
-    const message = `Новая заявка! \n\n👥 Имя: \n${fullName}\n\n💌 Почта: \n${email}\n\n📱 Номер телефона: \n${phone}`
+    const message = `${t("footer.promptText")} \n\n👥 ${t("footer.contactUs")} \n${fullName}\n\n💌 ${t("footer.emailPlaceholder")}: \n${email}\n\n📱 ${t("footer.phonePlaceholder")}: \n${phone}`
 
     try {
-      const response = await fetch(`https://api.telegram.org/bot7652130986:AAEm6KUZQZ3b2GK2h2_ateV3sVdi9UILXPE/sendMessage`, {
+      const response = await fetch(`https://api.telegram.org/botTOKEN/sendMessage`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          chat_id: '-4535958759',
+          chat_id: 'CHAT_ID',
           text: message,
         }),
       })
@@ -41,10 +43,10 @@ const Footer = () => {
         setEmail('')
         setPhone('')
       } else {
-        console.error('Ошибка при отправке формы')
+        console.error('Form submission error')
       }
     } catch (error) {
-      console.error('Ошибка при отправке данных:', error)
+      console.error('Data submission error:', error)
     }
   }
 
@@ -52,53 +54,47 @@ const Footer = () => {
     <div className={classes.wrapper}>
       <div style={{ borderBottom: '1px solid #8F8F8F' }}>
         <div className={classes.text}>
-          <p>начнем творить красоту <br /> прямо сейчас?</p>
+          <p>{t("footer.promptText")}</p>
         </div>
         <div className={classes.form}>
-          <form action="" onSubmit={handleSubmit}>
-            <p>связь с нами:</p>
+          <form onSubmit={handleSubmit}>
+            <p>{t("footer.contactUs")}</p>
             <input 
-              type="name" 
+              type="text" 
               name="name"
-              placeholder="Как Вас зовут?" 
+              placeholder={t("footer.namePlaceholder")} 
               value={fullName} 
               onChange={handleFullNameChange} 
             />
             <input 
               type="email"
               name="email"
-              placeholder="Ваш e-mail" 
+              placeholder={t("footer.emailPlaceholder")} 
               value={email} 
               onChange={handleEmailChange} 
             />
             <input 
               type="tel"
               name="tel"
-              placeholder="Ваш номер телефона" 
+              placeholder={t("footer.phonePlaceholder")} 
               value={phone} 
               onChange={handlePhoneChange} 
             />
-            <button type="submit">отправить</button>
+            <button type="submit">{t("footer.submit")}</button>
           </form>
-          <Image src={logo} alt="логотип" />
+          <Image src={logo} alt="logo" />
         </div>
       </div>
       <div className={classes.contactUs}>
-        <p>
-          Ирина Граве - дипломированный дизайнер, с отличием окончила школу «Детали». 
-          Занимается дизайном частных и общественных интерьеров. В основе её работы над 
-          каждым проектом лежит архитектура пространства и специфика образа жизни 
-          конкретного заказчика. Ирина ведет авторский надзор за осуществлением 
-          ремонтно-строительных работ.
-        </p>
+        <p>{t("footer.aboutText")}</p>
         <div className={classes.links}>
-          <Link href="mailto:info@irinagrave.com?subject=Заявка с сайта">info@irinagrave.com</Link><p>&#8594;</p>
-          <Link href="tel:88005553535">8 (800) 555-35-35</Link><p>&#8594;</p>
-          <Link href="https://www.instagram.com/irina_grave">instagram*</Link><p>&#8594;</p>
+          <Link href={`mailto:${t("footer.emailLink")}`}>{t("footer.emailLink")}</Link><p>&#8594;</p>
+          <Link href={`tel:${t("footer.phoneLink")}`}>{t("footer.phoneLink")}</Link><p>&#8594;</p>
+          <Link href="https://www.instagram.com/irina_grave">{t("footer.instagramLink")}</Link><p>&#8594;</p>
         </div>
         <div className={classes.mobileImage}>
-          <Image src={logo} alt="логотип"  quality={100}/>
-          <p>© 2024 Irina Grave All rights Reserved</p>
+          <Image src={logo} alt="logo" quality={100}/>
+          <p>{t("footer.copyright")}</p>
         </div>
       </div>
     </div>

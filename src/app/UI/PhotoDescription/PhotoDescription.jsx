@@ -1,20 +1,24 @@
+'use client'
+
 import React from 'react';
 import photo from '../../../../public/images/main page/mainPagePhoto.jpeg';
 import classes from './PhotoDescription.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 const PhotoDescription = ({ showLink }) => {
+  const { t } = useTranslation();
+
   return (
     <div className={classes.wrapper} >
      <div className={classes.text}>
       <p>
-      Ирина Граве - дипломированный дизайнер, с отличием окончила школу «Детали». Занимается дизайном частных и общественных интерьеров. В основе её работы над каждым проектом лежит архитектура пространства и специфика образа жизни конкретного заказчика. Ирина ведет авторский надзор за осуществлением ремонтно-строительных работ. Все проекты осуществляются "под ключ": начиная от планировочных решений и заканчивая подбором текстиля и аксессуаров.
+      {t('paragraph1')}
       <br /><br />
-      “Для меня очень важно понять самого заказчика, его мировозрение, создать интерьер, в котором ему будет комфортно психологически, вне времени и моды. Но в то же время, стараюсь открывать для заказчика и новые горизонты. Также мне нравится использовать натуральные материалы и спокойную цветовую гамму, делая фокус на людях, живущих в созданных мною интерьерах.’’ 
-      - говорит Ирина
+      {t('paragraph2')}
       </p>
-      {showLink && <Link href="/about">подробнее о студии</Link>}
+      {showLink && <Link href="/about">{t('readMore')}</Link>}
      </div>
     <Image src={photo} alt="фотография" width={475} height={815} />
   </div>

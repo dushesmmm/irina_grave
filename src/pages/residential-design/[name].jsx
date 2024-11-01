@@ -12,9 +12,12 @@ import "keen-slider/keen-slider.min.css";
 import arrow from '../../../public/images/arrow-project-switcher.svg'
 import galleryArrow from '../../../public/images/gallery-arrow.svg'
 import galleryCross from '../../../public/images/gallery-cross.svg'
+import { useTranslation } from "next-i18next";
 
 
 const Pr = () => {
+  const {t} = useTranslation()
+
   const router = useRouter();
 
   const urls = residentialDesignPages.map((page) => page.name);
@@ -23,6 +26,8 @@ const Pr = () => {
     const parts = url.split("/");
     return parts[parts.length - 1];
   });
+
+  console.log(names)
 
   const [isLargeScreen, setIsLargeScreen] = useState(false);
   useEffect(() => {
@@ -39,6 +44,7 @@ const Pr = () => {
   const isNameValid = names.includes(router.query.name);
 
   const index = names.indexOf(router.query.name);
+
   let matchedObject;
   if (index !== -1) {
     matchedObject = residentialDesignPages[index];
@@ -107,8 +113,8 @@ const Pr = () => {
       {matchedObject && (
         <>
           <div className={classes.wrapper}>
-            <h1 className={classes.title}>{matchedObject.title}</h1>
-            <h2 className={classes.category}>{matchedObject.category}</h2>
+            <h1 className={classes.title}>{t(`project${index+1}.title`)}</h1>
+            <h2 className={classes.category}>{t(`project${index+1}.category`)}</h2>
             <div style={{ display: "flex", justifyContent: "center" }}>
               <Image
                 className={classes.mainImage}
@@ -117,7 +123,7 @@ const Pr = () => {
               />
             </div>
             <div className={classes.mainDescription}>
-              <p>{matchedObject.description}</p>
+              <p>{t(`project${index+1}.description`)}</p>
             </div>
           </div>
 
@@ -134,7 +140,7 @@ const Pr = () => {
                     <Image
                       src={image}
                       alt={`Slide ${idx}`}
-                      className={`${classes.slideImage} `}
+                      className={`${classes.slideImage}`}
                     />
                   </div>
                 ))}
@@ -184,15 +190,15 @@ const Pr = () => {
             <div className={classes.prevProjectButton} onClick={goToPreviousProject}>
               <Image className={classes.arrowProjectButtonPrevious} src={arrow} />
               <div className={classes.projectButtonText}>
-                <div>{residentialDesignPages[(index - 1 + residentialDesignPages.length) % residentialDesignPages.length].title}</div>
-                <div>Предыдущий проект</div>
+                <div>{t(`project${(index - 1 + residentialDesignPages.length) % residentialDesignPages.length}.title`)}</div>
+                <div>{t(`prevProject`)}</div>
               </div>
             </div>
             <div className={classes.nextProjectButton} onClick={goToNextProject}>
               <Image className={classes.arrowProjectButtonNext} src={arrow} />
               <div className={classes.projectButtonText}>
-                <div>{residentialDesignPages[(index + 1) % residentialDesignPages.length].title}</div>
-                <div>Следующий проект</div>
+                <div>{t(`project${(index + 1 + residentialDesignPages.length) % residentialDesignPages.length}.title`)}</div>
+                <div>{t(`nextProject`)}</div>
               </div>
             </div>
           </div>
