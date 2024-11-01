@@ -8,7 +8,7 @@ import Link from "next/link";
 import './Header.css'
 import { useTranslation } from "next-i18next";
 import about from "@/app/about/layout";
-import i18n from "@/i18n";
+import i18n from "@/pages/i18n";
 
 const Header = ({ dark }) => {
   const [menuOpen, setMenuOpen] = useState(false);
