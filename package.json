@@ -31,5 +31,8 @@
     "experimental": {
       "scrollRestoration": true
     }
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
