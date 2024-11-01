@@ -168,16 +168,17 @@ const Pr = () => {
 
           {isModalOpen && (
             <div className={classes.modal} onClick={closeModal}>
-              <Image className={classes.prevButton} onClick={prevImage} src={galleryArrow} />
+              <Image className={classes.prevButton} onClick={prevImage} src={galleryArrow} alt="arrow prev" />
               <Image
                 src={matchedObject.images[activeImage]}
                 alt={`Image ${activeImage}`}
                 className={classes.fullscreenImage}
               />
-              <Image className={classes.nextButton} onClick={nextImage} src={galleryArrow} />
+              <Image className={classes.nextButton} onClick={nextImage} src={galleryArrow} alt='arrow next' />
               <Image
                 className={classes.closeButton}
                 src={galleryCross}
+                alt='cross'
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsModalOpen(false);
@@ -188,14 +189,14 @@ const Pr = () => {
 
           <div className={classes.navigationButtons}>
             <div className={classes.prevProjectButton} onClick={goToPreviousProject}>
-              <Image className={classes.arrowProjectButtonPrevious} src={arrow} />
+              <Image className={classes.arrowProjectButtonPrevious} src={arrow} alt="arrow prev"/>
               <div className={classes.projectButtonText}>
                 <div>{t(`project${(index - 1 + residentialDesignPages.length) % residentialDesignPages.length}.title`)}</div>
                 <div>{t(`prevProject`)}</div>
               </div>
             </div>
             <div className={classes.nextProjectButton} onClick={goToNextProject}>
-              <Image className={classes.arrowProjectButtonNext} src={arrow} />
+              <Image className={classes.arrowProjectButtonNext} src={arrow} alt='arrow next' />
               <div className={classes.projectButtonText}>
                 <div>{t(`project${(index + 1 + residentialDesignPages.length) % residentialDesignPages.length}.title`)}</div>
                 <div>{t(`nextProject`)}</div>
