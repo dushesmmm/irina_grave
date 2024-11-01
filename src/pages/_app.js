@@ -2,8 +2,6 @@
 
 import Layout from '../app/layout'
 
-import './i18n'
-
 export default function MyApp({ Component, pageProps }) {
     return (
       <Layout suppressHydrationWarning={true}>

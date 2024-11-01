@@ -4,9 +4,11 @@ const nextConfig = {
         scrollRestoration: true,
     },
     i18n: {
-        locales: ['en', 'ru'],
+        locales: ['ru', 'en',],
         defaultLocale: 'ru',
-    },
+        localeDetection: true,
+      },
+      trailingSlash: true,
 };
 
 export default nextConfig;
