@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Проект портфолио дизайнера Ирины Граве.
 
-## Getting Started
+**Ссылка на проект:** [irinagrave.ru](https://irina-grave.vercel.app/)
 
-First, run the development server:
+## Команда разработки
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Frontend Developer** (я)
+- **Дизайнер макетов в Figma**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Что было сделано на сайте
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Вместо базы данных используются json файлы по просьбе заказчика.
+- **Адаптивная Pixel Perfect верстка** по макету Figma.
+- Добавление базы данных клиентов, которые ввели данные в форму обратной связи в **Google Sheets** по клику.
+- Уведомление о форме обратной связи в **Telegram**.
+- Мультиязычность сайта при помощи библиотеки **i18n**.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Стек технологий
 
-## Learn More
+<div align="left">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" alt="react logo"  />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="css3 logo"  />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
+</div>
 
-To learn more about Next.js, take a look at the following resources:
+## TODO
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Добавить метатеги.
+- Дождаться фото и описания от заказчика на последение проекты и мейн пейдж.
