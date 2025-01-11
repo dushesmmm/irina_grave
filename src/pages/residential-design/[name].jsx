@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { residentialDesignPages } from "../api/data/rdp";
+import { residentialDesignPages } from "../../pages/api/data/rdp";
 import Error from "next/error";
 import Image from "next/image";
 import Header from "@/app/UI/header/Header";
@@ -14,7 +14,6 @@ import galleryArrow from '../../../public/images/gallery-arrow.svg'
 import galleryCross from '../../../public/images/gallery-cross.svg'
 import { useTranslation } from "next-i18next";
 import Head from "next/head";
-import metaimage from '../../../public/images/main page/logo.jpg'
 
 const Pr = () => {
   const {t} = useTranslation()
@@ -61,9 +60,9 @@ const Pr = () => {
     loop: true
   });
 
-  if (!isNameValid) {
-    return <Error statusCode={404} />;
-  }
+  // if (!isNameValid) {
+  //   return <Error statusCode={404} />;
+  // }
 
   const openModal = (index) => {
     setActiveImage(index);
@@ -105,9 +104,7 @@ const Pr = () => {
       query: { name: names[prevIndex] },
     });
   };
-
-  console.log(metaimage)
-
+  
   return (
     <div>
       <Head>
