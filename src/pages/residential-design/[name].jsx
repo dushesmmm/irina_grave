@@ -139,14 +139,14 @@ const Pr = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content={matchedObject.title} />
         <meta property="og:description" content={matchedObject.description} />
-        <meta property="og:image" content='https://3.downloader.disk.yandex.ru/preview/22c2966fc2048f9fa9f5e51eab40bcadcc1c9d16059feeab3cce5f7b4b954bb8/inf/PjAxIH_LofpgX-OjafGiR3EjVoVXe6fXQRdtR9w2jIB7JBObW5zbYaYv9nSoHXITs5VEzSetV0QkZvOBfCUb4A%3D%3D?uid=1487643918&filename=logo.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1487643918&tknv=v2&size=1264x945' />
+        <meta property="og:image" content="https://opengraph.b-cdn.net/production/images/a6c246ea-7d77-4dd7-a4df-6603902f5783.jpg?token=otlBY0qPOjDMuZuM2f4OLvxqMKme5F5g00USsHyBTIs&height=301&width=649&expires=33272614789" />
         <meta property="og:locale" content="ru_RU" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="irinagrave.ru" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={matchedObject.title} />
         <meta name="twitter:description" content={matchedObject.description} />
-        <meta name="twitter:image" content='https://3.downloader.disk.yandex.ru/preview/22c2966fc2048f9fa9f5e51eab40bcadcc1c9d16059feeab3cce5f7b4b954bb8/inf/PjAxIH_LofpgX-OjafGiR3EjVoVXe6fXQRdtR9w2jIB7JBObW5zbYaYv9nSoHXITs5VEzSetV0QkZvOBfCUb4A%3D%3D?uid=1487643918&filename=logo.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1487643918&tknv=v2&size=1264x945' />
+        <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/a6c246ea-7d77-4dd7-a4df-6603902f5783.jpg?token=otlBY0qPOjDMuZuM2f4OLvxqMKme5F5g00USsHyBTIs&height=301&width=649&expires=33272614789" />
       </Head>
       <Header />
       {matchedObject && (
