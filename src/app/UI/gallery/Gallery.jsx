@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
 
-const Gallery = ({projects}) => {
+const Gallery = ({ projects }) => {
   const [showImagesOnly, setShowImagesOnly] = useState(false);
 
   const onlyImages = () => {
@@ -17,6 +17,9 @@ const Gallery = ({projects}) => {
   };
 
   const { t } = useTranslation();
+
+  // Reverse the projects array
+  const reversedProjects = [...projects].reverse();
 
   return (
     <div>
@@ -36,7 +39,7 @@ const Gallery = ({projects}) => {
           showImagesOnly ? classes.doubleWrapper : ""
         }`}
       >
-        {projects.map((project, index) => (
+        {reversedProjects.map((project, index) => (
           <div
             key={project.id}
             className={`${classes.project} ${

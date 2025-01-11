@@ -88,6 +88,12 @@
     "linkText": "view project",
     "category": "APARTMENT | MOSCOW"
   },
+  "project9": {
+    "title": "Apartment of 150 sq/m in the new residential complex 'Lucky'",
+    "description": "An apartment of 150 sq/m in the new 'Lucky' residential complex on Presnya. The clients, a large family, purchased the apartment already with a finished interior, so the request for renovation was to create a beautiful design without major interventions. It was decided to fill the space with various natural textures, art, and collectible design. Special attention in the project was paid to art. The clients have a family tradition: collecting rare design items, visual art, and decor. After studying the clients' preferences and tastes, Irina enriched their family collection with new bronze sculptures from the 1960s, created for the 1980 Olympics, which elegantly found their place on the Minotti sideboard in the dining area and on the coffee table in the living room.",
+    "linkText": "view project",
+    "category": "APARTMENT | MOSCOW, 'Lucky' Residential Complex"
+  },
   "nextProject" : "Next project",
   "prevProject" : "Previous project",
   "galleryMain": {
@@ -106,17 +112,17 @@
     "exhibitions": "Participation in exhibitions and public projects.",
     "inProgress": "PROJECT IN PROGRESS"
   },
-  "project11": {
+  "project101": {
     "title": "MOSBUILD Stand Maximal Luxe",
     "description": "The clients, a family with two children, were looking for a spacious apartment in Moscow — at least 300 m². They consulted with a designer even during the search phase. \"There are not many apartments of this size on the market. We reviewed layouts together and assessed whether it was possible to achieve what was needed, specifically bedrooms for each family member, each with its own bathroom and walk-in closet,\" says Irina.",
     "linkText": "view project",
     "category": "EXHIBITION | MOSCOW"
   },
-  "project21": {
-    "title": "House on Nikolskaya Sloboda",
-    "description": "A luxurious 850 m² house located in the prestigious Nikolskaya Sloboda area. Designed to provide comfort and elegance, the project combines spacious rooms with custom design features tailored to the clients' lifestyle and needs. The layout includes private bedrooms with en-suite bathrooms, expansive living areas, and personalized spaces for relaxation and entertainment, ideal for a sophisticated family home.",
+  "project201": {
+    "title": "MOSBUILD Stand Maximal Luxe",
+    "description": "The clients, a family with two children, were looking for a spacious apartment in Moscow — at least 300 m². They consulted with a designer even during the search phase. \"There are not many apartments of this size on the market. We reviewed layouts together and assessed whether it was possible to achieve what was needed, specifically bedrooms for each family member, each with its own bathroom and walk-in closet,\" says Irina.",
     "linkText": "view project",
-    "category": "RESIDENTIAL | NIKOLSKAYA SLOBODA"
+    "category": "EXHIBITION | MOSCOW"
 }
 
 

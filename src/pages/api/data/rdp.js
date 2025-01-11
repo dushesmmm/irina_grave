@@ -145,13 +145,56 @@ import ar23 from '../../../../public/images/residential design/residential desig
 import ar24 from '../../../../public/images/residential design/residential design 5/ar-deco-24.jpg'
 import ar25 from '../../../../public/images/residential design/residential design 5/ar-deco-25.jpg'
 
+import wh1 from '../../../../public/images/residential design/residential design 7/wh1.jpg'
+import wh2 from '../../../../public/images/residential design/residential design 7/wh2.jpg'
+import wh3 from '../../../../public/images/residential design/residential design 7/wh3.jpg'
+import wh4 from '../../../../public/images/residential design/residential design 7/wh4.jpg'
+import wh5 from '../../../../public/images/residential design/residential design 7/wh5.jpg'    
+import wh6 from '../../../../public/images/residential design/residential design 7/wh6.jpg'
+import wh7 from '../../../../public/images/residential design/residential design 7/wh7.jpg'
+import wh8 from '../../../../public/images/residential design/residential design 7/wh8.jpg'
+import wh9 from '../../../../public/images/residential design/residential design 7/wh9.jpg'
+import wh10 from '../../../../public/images/residential design/residential design 7/wh10.jpg'
+import wh11 from '../../../../public/images/residential design/residential design 7/wh11.jpg'
+import wh12 from '../../../../public/images/residential design/residential design 7/wh12.jpg'
+import wh13 from '../../../../public/images/residential design/residential design 7/wh13.jpg'
+import wh14 from '../../../../public/images/residential design/residential design 7/wh14.jpg'
+import wh15 from '../../../../public/images/residential design/residential design 7/wh15.jpg'
+import wh16 from '../../../../public/images/residential design/residential design 7/wh16.jpg'
+import wh17 from '../../../../public/images/residential design/residential design 7/wh17.jpg'    
+import wh18 from '../../../../public/images/residential design/residential design 7/wh18.jpg'    
+import wh19 from '../../../../public/images/residential design/residential design 7/wh19.jpg'
+
+import l1 from '../../../../public/images/residential design/residential design 9/l 1.jpg'
+import l2 from '../../../../public/images/residential design/residential design 9/l 2.jpg'
+import l3 from '../../../../public/images/residential design/residential design 9/l 3.jpg'
+import l4 from '../../../../public/images/residential design/residential design 9/l 4.jpg'
+import l5 from '../../../../public/images/residential design/residential design 9/l 5.jpg'
+import l6 from '../../../../public/images/residential design/residential design 9/l 6.jpg'
+import l7 from '../../../../public/images/residential design/residential design 9/l 7.jpg'
+import l8 from '../../../../public/images/residential design/residential design 9/l 8.jpg'
+import l9 from '../../../../public/images/residential design/residential design 9/l 9.jpg'
+import l10 from '../../../../public/images/residential design/residential design 9/l 10.jpg'
+import l11 from '../../../../public/images/residential design/residential design 9/l 11.jpg'
+import l12 from '../../../../public/images/residential design/residential design 9/l 12.jpg'
+import l13 from '../../../../public/images/residential design/residential design 9/l 13.jpg'
+import l14 from '../../../../public/images/residential design/residential design 9/l 14.jpg'
+import l15 from '../../../../public/images/residential design/residential design 9/l 15.jpg'
+import l16 from '../../../../public/images/residential design/residential design 9/l 16.jpg'
+import l17 from '../../../../public/images/residential design/residential design 9/l 17.jpg'
+import l18 from '../../../../public/images/residential design/residential design 9/l 18.jpg'
+import l19 from '../../../../public/images/residential design/residential design 9/l 19.jpg'
+import l20 from '../../../../public/images/residential design/residential design 9/l 20.jpg'
+
 import mainimage2 from "../../../../public/images/residential design/residential design 2/black-and-white-main.jpg";
 import mainimage1 from "../../../../public/images/residential design/residential design 1/main image 1.jpg";
 import mainimage3 from "../../../../public/images/residential design/residential design 3/Irina’s-grave-apartment-main.jpg"
 import mainimage4 from "../../../../public/images/residential design/residential design 4/light-apartments-main.jpg";
 import mainimage5 from '../../../../public/images/residential design/residential design 5/ar-deco-main.jpg'
 import mainimage6 from '../../../../public/images/residential design/residential design 6/electic-apartment-in-Moscow-main.jpg'
+import mainimage7 from '../../../../public/images/residential design/residential design 7/wh19.jpg'
 import mainimage8 from "../../../../public/images/residential design/residential design 8/children_main.jpg";
+import mainimage9 from "../../../../public/images/residential design/residential design 9/l 1.jpg";
 
 export const residentialDesignPages = [
   {
@@ -225,9 +268,9 @@ export const residentialDesignPages = [
       "Дом площадью 450 квадратных метров находится на Дмитровском шоссе, рядом с водохранилищем. «Владельцы — молодая семья с тремя детьми, приобрели недостроенный сруб и хотели превратить его в комфортный дом, в котором есть все преимущества жизни на природе, но в то же время нет ощущения дачи», — рассказывает Ирина Граве.",
     name: "/residential-design/wooden house",
     image: image7,
-    images : [],
+    images : [wh1, wh2, wh3, wh4, wh5, wh6, wh7, wh8, wh9, wh10, wh11, wh12, wh13, wh14, wh15, wh16, wh17, wh18],
     category: "ДОМ | ПОДМОСКОВЬЕ",
-    // mainimage: ,
+    mainimage: mainimage7,
   },
   {
     id: 8,
@@ -239,5 +282,15 @@ export const residentialDesignPages = [
     images: [children1, children2, children3, children4, children5, children6, children7, children8, children9, children10, children11, children12, children13, children14, children15, children16, children17],
     category: "КВАРТИРА | МОСКВА",
     mainimage: mainimage8
+  },
+  {
+    id: 9,
+    title: "Квартира 150 кв/м в новом ЖК “Lucky”",
+    description: "Квартира 150 кв/м в новом жк “Lucky” на Пресне. Заказчики - большая семья, приобрели квартиру уже в финишной отделке, поэтому запрос на ремонт был - сделать красивый интерьер, но без серьезных вмешательств. Было принято решение заполнить пространство различными натуральными фактурами, искусством и коллекционным дизайном. Отдельное внимание в проекте было уделено искусству. У заказчиков есть семейная традиция : собирать редкие предметы дизайна, изобразительного искусства и декора. Изучив желания и вкус заказчиков, Ирина пополнила их семейную коллекцию новыми бронзовыми скульптурами 60-х годов, выпущенных к Олимпиаде 80, которые элегантно расположились на комоде minotti в обеденной зоне и на кофейном столе в гостиной.",
+    name: "/residential-design/lucky",
+    image: mainimage9,
+    images: [l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13, l14, l15, l16, l17, l18, l19, l20],
+    category: "КВАРТИРА | МОСКВА",
+    mainimage: mainimage9
   },
 ];

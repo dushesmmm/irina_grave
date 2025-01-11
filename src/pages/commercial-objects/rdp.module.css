@@ -1,0 +1,352 @@
+.wrapper {
+    margin: 50px;
+}
+
+.title {
+    font-family: var(--font-playfair);
+    font-size: 96px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    text-wrap: balance;
+    margin-bottom: 0;
+    line-height: 100px;
+    margin-top: 90px;
+}
+
+.category {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    color: #9c9c9c;
+    margin: 40px;
+}
+
+.mainImage {
+    width: 1300px;
+    /* aspect-ratio: 16/9; */
+    height: auto;
+    align-self: center;
+}
+
+.image {
+    width: 50%;
+    height: auto;
+}
+
+.mainDescription {
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 20px;
+    width: 100%;
+}
+
+.mainDescription p {
+    text-align: justify;
+    width: 1300px;
+    margin-top: 84px;
+    margin-top: 84px;
+}
+
+.carouselWrapper {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.carouselImage {
+    align-self: center;
+    width: 50%;
+    height: auto;
+    max-height: 500px;
+    width: auto;
+}
+
+.slideImage {
+    width: 190px;
+    height: auto;
+    aspect-ratio: 19/24;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .fullscreenImage {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+  }
+  
+  .prevButton,
+  .nextButton,
+  .closeButton {
+    position: absolute;
+    background-color: transparent;
+    color: #8f8f8f;
+    font-size: 50px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prevButton {
+    left: 15%;
+  }
+  
+  .nextButton {
+    right: 15%;
+    transform: scaleX(-1);
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    font-size: 18px;
+    color: #8f8f8f;
+    font-size: 25px;
+  }
+
+  .navigationButtons {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 45px;
+  }
+
+  .prevProjectButton {
+    cursor: pointer;
+  }
+
+  .nextProjectButton {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    cursor: pointer;
+    text-align: end;
+  }
+
+  .arrowProjectButtonPrevious {
+    width: fit-content;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 15px;
+    color: #8f8f8f;
+  }
+
+  .arrowProjectButtonNext {
+    width: fit-content;
+    position: absolute;
+    margin-right: -20px;
+    margin-top: 15px;
+    color: #8f8f8f;
+    transform: scaleX(-1);
+  }
+
+  .projectButtonText {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+
+    font-size: 16px;
+    font-weight: 300;
+    color: #8f8f8f;
+  }
+  
+  .projectButtonText :first-child {
+    font-family: var(--font-playfair);
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-wrap: balance;
+    color: black;
+  }
+
+  .imagesGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100% !important;
+    justify-content: space-evenly;
+  }
+
+  .imagesGrid img {
+    width: 40vw;
+    height: auto;
+    cursor: pointer;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+
+  .keen div:nth-child(1) {
+    width: 1300px;
+  }
+
+  @media screen and (max-width: 1600px) {
+  .navigationButtons {
+    justify-content: space-between;
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+  .mainImage {
+    width: 1200px;
+  }
+  .mainDescription p {
+    width: 1200px;
+  }
+  .keen div:nth-child(1) {
+    width: 1200px;
+  }
+  .nextButton {
+    right: 1%;
+  }
+  .closeButton {
+    right: 1%;
+  }
+  .prevButton {
+    left: 1%;
+  }
+}
+
+  @media screen and (max-width: 1350px) {
+  .navigationButtons {
+    justify-content: space-between;
+    margin-right: 60px;
+    margin-left: 60px;
+  }
+  .mainImage {
+    width: 1100px;
+  }
+  .mainDescription p {
+    width: 1100px;
+  }
+  .keen div:nth-child(1) {
+    width: 1100px;
+  }
+  .title {
+    font-size: 82px;
+  }
+}
+  @media screen and (max-width: 1165px) {
+  .navigationButtons {
+    justify-content: space-between;
+    margin-right: 70px;
+    margin-left: 70px;
+  }
+  .mainImage {
+    width: 1000px;
+  }
+  .mainDescription p {
+    width: 1000px;
+  }
+  .keen div:nth-child(1) {
+    width: 1000px;
+  }
+  .title {
+    font-size: 78px;
+  }
+}
+  @media screen and (max-width: 1055px) {
+  .navigationButtons {
+    justify-content: space-between;
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+  .mainImage {
+    width: 900px;
+  }
+  .mainDescription p {
+    width: 900px;
+  }
+  .keen div:nth-child(1) {
+    width: 900px;
+  }
+  .title {
+    font-size: 68px;
+    margin-top: 100px;
+  }
+  .wrapper {
+    margin: 0;
+  }
+  .slideImage {
+    width: 150px;
+  }
+}
+
+  @media screen and (max-width: 950px) {
+  .navigationButtons {
+    justify-content: space-between;
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+  .mainImage {
+    width: 600px;
+  }
+  .mainDescription p {
+    width: 600px;
+    margin-top: 20px;
+  }
+  .title {
+    font-size: 48px;
+    margin-top: 100px;
+  }
+  .wrapper {
+    margin: 0;
+  }
+  .slideImage {
+    width: 100px;
+  }
+  .nextButton {
+    right: 15%;
+    bottom: 15%;
+  }
+  .prevButton {
+    left: 15%;
+    bottom: 15%;
+  }
+}
+
+  @media screen and (max-width: 550px) {
+  .navigationButtons {
+    justify-content: space-between;
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+  .mainImage {
+    width: 400px;
+  }
+  .mainDescription p {
+    width: 400px;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  .title {
+    font-size: 31px;
+  }
+  .category {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .projectButtonText :first-child {
+    font-size: 12px;
+  }
+  .projectButtonText {
+    font-size: 10px;
+  }
+}

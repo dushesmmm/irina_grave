@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
-import { progress } from '../../pages/api/data/progress'
+import { co } from '../../pages/api/data/co'
 import Error from 'next/error'
 import Image from 'next/image'
 import Header from '@/app/UI/header/Header'
@@ -17,7 +17,7 @@ import Head from 'next/head'
 
 export async function getServerSideProps(context) {
   const { name } = context.query
-  const urls = progress.map((page) => page.name)
+  const urls = co.map((page) => page.name)
   const names = urls.map((url) => {
     const parts = url.split('/')
     return parts[parts.length - 1]
@@ -28,7 +28,7 @@ export async function getServerSideProps(context) {
   }
 
   const index = names.indexOf(name)
-  const matchedObject = progress[index]
+  const matchedObject = co[index]
 
   return {
     props: {
@@ -43,7 +43,7 @@ const Pr = () => {
 
   const router = useRouter()
 
-  const urls = progress.map((page) => page.name)
+  const urls = co.map((page) => page.name)
 
   const names = urls.map((url) => {
     const parts = url.split('/')
@@ -68,7 +68,7 @@ const Pr = () => {
 
   let matchedObject
   if (index !== -1) {
-    matchedObject = progress[index]
+    matchedObject = co[index]
   }
 
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -108,7 +108,7 @@ const Pr = () => {
   }
 
   const goToNextProject = () => {
-    const nextIndex = (index + 1) % progress.length
+    const nextIndex = (index + 1) % co.length
     router.push({
       pathname: '/residential-design/[name]',
       query: { name: names[nextIndex] },
@@ -116,15 +116,14 @@ const Pr = () => {
   }
 
   const goToPreviousProject = () => {
-    const prevIndex =
-      index === 0 ? progress.length - 1 : index - 1
+    const prevIndex = index === 0 ? co.length - 1 : index - 1
     router.push({
       pathname: '/residential-design/[name]',
       query: { name: names[prevIndex] },
     })
   }
 
-  console.log(index + 2 > progress.length)
+  console.log(index + 2 > co.length)
 
   return (
     <div>
@@ -210,7 +209,6 @@ const Pr = () => {
             )}
           </div>
 
-
           {isModalOpen && (
             <div className={classes.modal} onClick={closeModal}>
               <Image
@@ -242,7 +240,6 @@ const Pr = () => {
             </div>
           )}
 
-
           {/* // ТУТ НАВИГАЦИЯ */}
 
           {/* <div className={classes.navigationButtons}>
@@ -259,7 +256,7 @@ const Pr = () => {
                 <div>
                   {t(
                     `project${
-                      index === 0 ? progress.length : index 
+                      index === 0 ? co.length : index 
                     }.title`
                   )}
                 </div>
@@ -279,7 +276,7 @@ const Pr = () => {
                 <div>
                   {t(
                     `project${
-                      index + 2 > progress.length ? 1 : index + 2
+                      index + 2 > co.length ? 1 : index + 2
                     }.title`
                   )}
                 </div>

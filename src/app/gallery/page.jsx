@@ -38,7 +38,7 @@ const GalleryPage = () => {
         <Image src={image4} alt={t('galleryMain.image4Alt')} />
       </div>
       <div className={classes.block}>
-        <Link href="/coming-soon">{t('galleryMain.commercialObjects')}</Link>
+        <Link href="/commercial-objects">{t('galleryMain.commercialObjects')}</Link>
         <p>
           {t('galleryMain.commercialDescription')}
         </p>
