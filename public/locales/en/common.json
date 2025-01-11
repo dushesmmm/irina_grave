@@ -1,6 +1,6 @@
 {
     "gallery": "Gallery",
-    "authorship": "Authorship",
+    "authorship": "Custom",
     "about_us": "About Us",
     "contacts": "Contacts",
     "language_switch": "en/ru",
@@ -9,15 +9,15 @@
     "readMore": "more about the studio",
     "mainPage": {
     "titles": [
-      "Moscow Penthouse 470 sqm",
+      "Moscow Penthouse 470 m²",
       "Irina Grave's Designer Apartment in Presnya",
-      "Bright Apartment 65 sqm in Moscow",
+      "Bright Apartment 65 m² in Moscow",
       "Apartment in Moscow with Black and White Palette",
       "Eclectic Apartment in Moscow",
-      "Moscow Apartment 250 sqm in Art Deco Style"
+      "Moscow Apartment 250 m²in Art Deco Style"
     ],
     "descriptions": [
-      "This project impresses with its scale: two levels, 470 sq.m., and over 1000 sq.m. of terrace space. Designer Irina Grave meticulously crafted the vast space, showcasing a high level of expertise.",
+      "This project impresses with its scale: two levels, 470 m² and over 1000 m². of terrace space. Designer Irina Grave meticulously crafted the vast space, showcasing a high level of expertise.",
       "“I aimed to create a light, airy interior that reflects my style. A home where one can relax from daily work on other projects and showcase a family art collection. It was essential to design it in a way that would stand the test of time.”",
       "“The client is a young man living between two countries: educated in France, he spends much time there. This is why he is fond of the aesthetics of French collectible design, which delighted me immensely!”",
       "The owners of this apartment lived in America for a long time – first for studies, then internships. Upon returning to Moscow, they searched for a new home and consulted designer Irina Grave for temporary apartment setup advice.",
@@ -41,8 +41,8 @@
     "copyright": "© 2024 Irina Grave All rights Reserved"
   },
   "project1": {
-    "title": "Moscow Penthouse of 470 sq. meters",
-    "description": "The clients, a family with two children, were looking for a large apartment in Moscow — at least 300 square meters. During the search, they consulted with a designer. 'There are not many large apartments on the market. We looked at layouts together and assessed whether we could get what was necessary, particularly bedrooms for all family members, each with its own bathroom and dressing rooms,' says Irina. They chose a two-level penthouse, the area of which is comparable to a country house. And considering the two terraces, 400 and 700 square meters, the owners effectively had a plot of 10 acres — just not on the ground, but high above the city.",
+    "title": "Moscow Penthouse of 470 m²",
+    "description": "The clients, a family with two children, were looking for a large apartment in Moscow — at least 300 m². During the search, they consulted with a designer. 'There are not many large apartments on the market. We looked at layouts together and assessed whether we could get what was necessary, particularly bedrooms for all family members, each with its own bathroom and dressing rooms,' says Irina. They chose a two-level penthouse, the area of which is comparable to a country house. And considering the two terraces, 400 and 700 m², the owners effectively had a plot of 10 acres — just not on the ground, but high above the city.",
     "linkText": "view project",
     "category": "APARTMENT | MOSCOW"
   },
@@ -54,13 +54,13 @@
   },
   "project3": {
     "title": "Irina Grava's Apartment in Presnya City",
-    "description": "Irina Grava chose an apartment for herself in a new residential complex in the Presnya area. 'I aimed to create a light, bright, airy interior that reflects my style. A home where I can relax from the daily work on other projects and display the family art collection. It was important to design it in such a way that I wouldn't want to change anything in a short time.' The initial data — one load-bearing wall, an open layout, and seven windows. 'The end windows overlook the city center, it immediately became clear that I wanted to make a living room there.' Ultimately, on an area of 90 square meters, the designer placed an open space for the living room-kitchen-dining room, a bedroom with its own dressing room and bathroom, an office with a dressing room, a hallway, and a guest bathroom.",
+    "description": "Irina Grava chose an apartment for herself in a new residential complex in the Presnya area. 'I aimed to create a light, bright, airy interior that reflects my style. A home where I can relax from the daily work on other projects and display the family art collection. It was important to design it in such a way that I wouldn't want to change anything in a short time.' The initial data — one load-bearing wall, an open layout, and seven windows. 'The end windows overlook the city center, it immediately became clear that I wanted to make a living room there.' Ultimately, on an area of 90 m², the designer placed an open space for the living room-kitchen-dining room, a bedroom with its own dressing room and bathroom, an office with a dressing room, a hallway, and a guest bathroom.",
     "linkText": "view project",
     "category": "APARTMENT | MOSCOW, PRESNYA CITY"
   },
   "project4": {
-    "title": "65 sq. meters Apartment in Light Shades in Moscow",
-    "description": "The 65-square-meter apartment is located in a new residential complex in northern Moscow. 'The client is a young man who lives between two countries: after receiving education in France, he spends a lot of time there. That's why he is close to the aesthetics of French collectible design, which I was incredibly pleased about! — says decorator Irina Grava. — The task was to furnish a space where he would feel comfortable staying during his visits to Moscow.",
+    "title": "65m²Apartment in Light Shades in Moscow",
+    "description": "The 65m² is located in a new residential complex in northern Moscow. 'The client is a young man who lives between two countries: after receiving education in France, he spends a lot of time there. That's why he is close to the aesthetics of French collectible design, which I was incredibly pleased about! — says decorator Irina Grava. — The task was to furnish a space where he would feel comfortable staying during his visits to Moscow.",
     "linkText": "view project",
     "category": "APARTMENT | MOSCOW"
   },
@@ -78,32 +78,46 @@
   },
   "project7": {
     "title": "Wooden House with Three Fireplaces in the Moscow Region",
-    "description": "The house has an area of 450 square meters and is located on Dmitrovskoye Highway, near a reservoir. 'The owners are a young family with three children who bought an unfinished log cabin and wanted to turn it into a comfortable home that has all the advantages of living in nature, but without the feeling of a summer house,' says Irina Grava.",
+    "description": "The house has an area of 450 m² and is located on Dmitrovskoye Highway, near a reservoir. 'The owners are a young family with three children who bought an unfinished log cabin and wanted to turn it into a comfortable home that has all the advantages of living in nature, but without the feeling of a summer house,' says Irina Grava.",
     "linkText": "view project",
     "category": "HOUSE | MOSCOW REGION"
   },
   "project8": {
     "title": "Space for Five Children in Moscow",
-    "description": "The clients already had an apartment where they lived. Thinking about expanding their living space, they purchased the neighboring apartment to create a separate 'children's area' for three girls and two boys. In 180 square meters, they accommodated five children's rooms, a nanny's room, three bathrooms, a laundry room, and a hall. To find space for all the rooms, they almost completely demolished all internal partitions and built anew.",
+    "description": "The clients already had an apartment where they lived. Thinking about expanding their living space, they purchased the neighboring apartment to create a separate 'children's area' for three girls and two boys. In 180 m², they accommodated five children's rooms, a nanny's room, three bathrooms, a laundry room, and a hall. To find space for all the rooms, they almost completely demolished all internal partitions and built anew.",
     "linkText": "view project",
     "category": "APARTMENT | MOSCOW"
   },
   "nextProject" : "Next project",
   "prevProject" : "Previous project",
   "galleryMain": {
-    "residentialObjects": "residential objects",
+    "residentialObjects": "RESIDENTIAL OBJECTS",
     "residentialDescription": "30+ residential projects implemented in Russia. The project is managed end-to-end, from concept development to full implementation with art and accessory selection.",
     "image1Alt": "image 1",
     "image2Alt": "image 2",
     "image3Alt": "image 3",
     "image4Alt": "image 4",
-    "commercialObjects": "commercial objects",
+    "commercialObjects": "COMMERCIAL OBJECTS",
     "commercialDescription": "Offices, beauty salons, boutiques have been implemented. The project takes into account the brand's personal stylist and the company's activity type.",
     "image5Alt": "image 5",
     "image6Alt": "image 6",
     "image7Alt": "image 7",
-    "extra": "extra",
+    "extra": "EXTRA",
     "exhibitions": "Participation in exhibitions and public projects.",
-    "inProgress": "projects in Progress"
-  }
+    "inProgress": "PROJECT IN PROGRESS"
+  },
+  "project11": {
+    "title": "MOSBUILD Stand Maximal Luxe",
+    "description": "The clients, a family with two children, were looking for a spacious apartment in Moscow — at least 300 m². They consulted with a designer even during the search phase. \"There are not many apartments of this size on the market. We reviewed layouts together and assessed whether it was possible to achieve what was needed, specifically bedrooms for each family member, each with its own bathroom and walk-in closet,\" says Irina.",
+    "linkText": "view project",
+    "category": "EXHIBITION | MOSCOW"
+  },
+  "project21": {
+    "title": "House on Nikolskaya Sloboda",
+    "description": "A luxurious 850 m² house located in the prestigious Nikolskaya Sloboda area. Designed to provide comfort and elegance, the project combines spacious rooms with custom design features tailored to the clients' lifestyle and needs. The layout includes private bedrooms with en-suite bathrooms, expansive living areas, and personalized spaces for relaxation and entertainment, ideal for a sophisticated family home.",
+    "linkText": "view project",
+    "category": "RESIDENTIAL | NIKOLSKAYA SLOBODA"
+}
+
+
 }

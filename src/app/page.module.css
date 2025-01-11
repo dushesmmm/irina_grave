@@ -64,6 +64,8 @@
   height: 300px;
   margin-left: -25px;
   margin-top: -10px;
+  text-transform: uppercase;
+  line-height: 80px;
 }
 
 .descriptionSection p  {

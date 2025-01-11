@@ -1,5 +1,5 @@
 import React from "react";
-import Gallery from "../../app/UI/gallery/Gallery";
+import Gallery from "../UI/gallery/Gallery";
 import { residentialDesignPages } from "@/pages/api/data/rdp";
 
 const residential = () => {

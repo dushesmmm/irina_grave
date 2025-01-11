@@ -81,9 +81,10 @@
   .text h2 {
     font-weight: 400;
     font-size: 55px;
-    text-align: justify;
     font-family: var(--font-playfair);
     margin-top: 0;
+    line-height: 55px;
+    text-transform: uppercase;
   }
   
   .text p {
