@@ -15,6 +15,30 @@ import galleryCross from '../../../public/images/gallery-cross.svg'
 import { useTranslation } from "next-i18next";
 import Head from "next/head";
 
+export async function getServerSideProps(context) {
+  const { name } = context.query;
+  const urls = residentialDesignPages.map((page) => page.name);
+  const names = urls.map((url) => {
+    const parts = url.split("/");
+    return parts[parts.length - 1];
+  });
+
+  if (!names.includes(name)) {
+    return { notFound: true };
+  }
+
+  const index = names.indexOf(name);
+  const matchedObject = residentialDesignPages[index];
+
+  return {
+    props: {
+      matchedObject,
+      index,
+    },
+  };
+}
+
+
 const Pr = () => {
   const {t} = useTranslation()
 
@@ -104,22 +128,24 @@ const Pr = () => {
       query: { name: names[prevIndex] },
     });
   };
+
+  console.log(matchedObject.title)
   
   return (
     <div>
       <Head>
-        <title>{t(`project${index+1}.title`)}</title>
-        <meta name="description" content={t(`project${index+1}.description`)} />
+        <title>{matchedObject.title}</title>
+        <meta name="description" content={matchedObject.description} />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:title" content={t(`project${index+1}.title`)} />
-        <meta property="og:description" content={t(`project${index+1}.description`)} />
+        <meta property="og:title" content={matchedObject.title} />
+        <meta property="og:description" content={matchedObject.description} />
         <meta property="og:image" content='https://3.downloader.disk.yandex.ru/preview/22c2966fc2048f9fa9f5e51eab40bcadcc1c9d16059feeab3cce5f7b4b954bb8/inf/PjAxIH_LofpgX-OjafGiR3EjVoVXe6fXQRdtR9w2jIB7JBObW5zbYaYv9nSoHXITs5VEzSetV0QkZvOBfCUb4A%3D%3D?uid=1487643918&filename=logo.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1487643918&tknv=v2&size=1264x945' />
         <meta property="og:locale" content="ru_RU" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="irinagrave.ru" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={t(`project${index+1}.title`)} />
-        <meta name="twitter:description" content={t(`project${index+1}.description`)} />
+        <meta name="twitter:title" content={matchedObject.title} />
+        <meta name="twitter:description" content={matchedObject.description} />
         <meta name="twitter:image" content='https://3.downloader.disk.yandex.ru/preview/22c2966fc2048f9fa9f5e51eab40bcadcc1c9d16059feeab3cce5f7b4b954bb8/inf/PjAxIH_LofpgX-OjafGiR3EjVoVXe6fXQRdtR9w2jIB7JBObW5zbYaYv9nSoHXITs5VEzSetV0QkZvOBfCUb4A%3D%3D?uid=1487643918&filename=logo.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1487643918&tknv=v2&size=1264x945' />
       </Head>
       <Header />
