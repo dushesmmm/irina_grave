@@ -1,13 +1,24 @@
-import image1 from "../../../../public/images/extra/extra 1/project image 1.jpg";
+import ml1 from "../../../../public/images/extra/extra 1/ml 1.jpg";
+import ml2 from "../../../../public/images/extra/extra 1/ml 2.jpg";
+import ml3 from "../../../../public/images/extra/extra 1/ml 3.jpg";
+import ml4 from "../../../../public/images/extra/extra 1/ml 4.jpg";
+import ml5 from "../../../../public/images/extra/extra 1/ml 5.jpg";
+import ml6 from "../../../../public/images/extra/extra 1/ml 6.jpg";
+import ml7 from "../../../../public/images/extra/extra 1/ml 7.jpg";
+import ml8 from "../../../../public/images/extra/extra 1/ml 8.jpg";
+import ml9 from "../../../../public/images/extra/extra 1/ml 9.jpg";
+import ml10 from "../../../../public/images/extra/extra 1/ml 10.jpg";
+import ml11 from "../../../../public/images/extra/extra 1/ml 11.jpg";
 
 export const extra = [
   {
-    id: '101',
-    name: "/design-in-progress/hata-v-moscow",
-    images: [ph1, ph2, ph4, ph5, ph6, ph7, ph8, ph9, ph10, ph11, ph12, ph13, ph14, ph15, ph16, ph17, ph18, ph19, ph20, ph21, ph22, ph23, ph24, ph25, ph26, ph27, ph28, ph29, ph30, ph31, ph32, ],
-    image: image1,
-    mainimage: mainimage1,
-    title: "Московский пентхаус 470 кв. метров",
-    description: "Заказчики, семья с двумя детьми, искали в Москве большую квартиру — не менее 300 метров. И уже на этапе поисков советовались с дизайнером. «Таких больших квартир на рынке немного. Мы вместе смотрели планировки и оценивали, можно ли получить из них то, что необходимо, в частности, спальни для всех членов семьи, каждую со своим санузлом и гардеробными», — рассказывает Ирина. Выбор пал на двухуровневый пентхаус, площадь которого сопоставима с загородным домом. А если учесть еще и две террасы, 400 и 700 кв. метров, то фактически в распоряжении хозяев оказался участок в 10 соток — только не на земле, а высоко над городом.",
+    id: 301,
+    name: '/extra/hata-v-moscow',
+    images: [ml1, ml2, ml3, ml4, ml5, ml6, ml7, ml8, ml9, ml10],
+    image: ml11,
+    mainimage: ml11,
+    title: 'MOSBUILD стенд maximal luxe',
+    description:
+      'Заказчики, семья с двумя детьми, искали в Москве большую квартиру — не менее 300 метров. И уже на этапе поисков советовались с дизайнером. «Таких больших квартир на рынке немного. Мы вместе смотрели планировки и оценивали, можно ли получить из них то, что необходимо, в частности, спальни для всех членов членов семьи, каждую со своим санузлом и гардеробными», — рассказывает Ирина.',
   },
 ]
