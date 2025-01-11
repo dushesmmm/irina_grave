@@ -4,7 +4,6 @@ import image3 from "../../../../public/images/residential design/residential des
 import image4 from "../../../../public/images/residential design/residential design 4/project image 1.jpg";
 import image5 from "../../../../public/images/residential design/residential design 5/project image 1.jpg";
 import image6 from "../../../../public/images/residential design/residential design 6/project image 1.jpg";
-import image7 from '../../../../public/images/residential design/residential design 7/wooden house.jpg'
 import image8 from "../../../../public/images/residential design/residential design 8/children_4.jpg";
 
 import children1 from "../../../../public/images/residential design/residential design 8/children_1.jpg"
@@ -145,25 +144,25 @@ import ar23 from '../../../../public/images/residential design/residential desig
 import ar24 from '../../../../public/images/residential design/residential design 5/ar-deco-24.jpg'
 import ar25 from '../../../../public/images/residential design/residential design 5/ar-deco-25.jpg'
 
-import wh1 from '../../../../public/images/residential design/residential design 7/wh1.JPG'
-import wh2 from '../../../../public/images/residential design/residential design 7/wh2.JPG'
-import wh3 from '../../../../public/images/residential design/residential design 7/wh3.JPG'
-import wh4 from '../../../../public/images/residential design/residential design 7/wh4.JPG'
-import wh5 from '../../../../public/images/residential design/residential design 7/wh5.JPG'    
-import wh6 from '../../../../public/images/residential design/residential design 7/wh6.JPG'
-import wh7 from '../../../../public/images/residential design/residential design 7/wh7.JPG'
-import wh8 from '../../../../public/images/residential design/residential design 7/wh8.JPG'
-import wh9 from '../../../../public/images/residential design/residential design 7/wh9.JPG'
-import wh10 from '../../../../public/images/residential design/residential design 7/wh10.JPG'
-import wh11 from '../../../../public/images/residential design/residential design 7/wh11.JPG'
-import wh12 from '../../../../public/images/residential design/residential design 7/wh12.JPG'
-import wh13 from '../../../../public/images/residential design/residential design 7/wh13.JPG'
-import wh14 from '../../../../public/images/residential design/residential design 7/wh14.JPG'
-import wh15 from '../../../../public/images/residential design/residential design 7/wh15.JPG'
-import wh16 from '../../../../public/images/residential design/residential design 7/wh16.JPG'
-import wh17 from '../../../../public/images/residential design/residential design 7/wh17.JPG'    
-import wh18 from '../../../../public/images/residential design/residential design 7/wh18.JPG'    
-import wh19 from '../../../../public/images/residential design/residential design 7/wh19.JPG'
+import wh1 from '../../../../public/images/residential design/residential design 7/wh1.jpg'
+import wh2 from '../../../../public/images/residential design/residential design 7/wh2.jpg'
+import wh3 from '../../../../public/images/residential design/residential design 7/wh3.jpg'
+import wh4 from '../../../../public/images/residential design/residential design 7/wh4.jpg'
+import wh5 from '../../../../public/images/residential design/residential design 7/wh5.jpg'    
+import wh6 from '../../../../public/images/residential design/residential design 7/wh6.jpg'
+import wh7 from '../../../../public/images/residential design/residential design 7/wh7.jpg'
+import wh8 from '../../../../public/images/residential design/residential design 7/wh8.jpg'
+import wh9 from '../../../../public/images/residential design/residential design 7/wh9.jpg'
+import wh10 from '../../../../public/images/residential design/residential design 7/wh10.jpg'
+import wh11 from '../../../../public/images/residential design/residential design 7/wh11.jpg'
+import wh12 from '../../../../public/images/residential design/residential design 7/wh12.jpg'
+import wh13 from '../../../../public/images/residential design/residential design 7/wh13.jpg'
+import wh14 from '../../../../public/images/residential design/residential design 7/wh14.jpg'
+import wh15 from '../../../../public/images/residential design/residential design 7/wh15.jpg'
+import wh16 from '../../../../public/images/residential design/residential design 7/wh16.jpg'
+import wh17 from '../../../../public/images/residential design/residential design 7/wh17.jpg'    
+import wh18 from '../../../../public/images/residential design/residential design 7/wh18.jpg'    
+import wh19 from '../../../../public/images/residential design/residential design 7/wh19.jpg'
 
 import l1 from '../../../../public/images/residential design/residential design 9/l 1.jpg'
 import l2 from '../../../../public/images/residential design/residential design 9/l 2.jpg'
@@ -267,7 +266,7 @@ export const residentialDesignPages = [
     description:
       "Дом площадью 450 квадратных метров находится на Дмитровском шоссе, рядом с водохранилищем. «Владельцы — молодая семья с тремя детьми, приобрели недостроенный сруб и хотели превратить его в комфортный дом, в котором есть все преимущества жизни на природе, но в то же время нет ощущения дачи», — рассказывает Ирина Граве.",
     name: "/residential-design/wooden house",
-    image: image7,
+    image: mainimage7,
     images : [wh1, wh2, wh3, wh4, wh5, wh6, wh7, wh8, wh9, wh10, wh11, wh12, wh13, wh14, wh15, wh16, wh17, wh18],
     category: "ДОМ | ПОДМОСКОВЬЕ",
     mainimage: mainimage7,
