@@ -115,7 +115,7 @@ const Pr = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content={t(`project${index+1}.title`)} />
         <meta property="og:description" content={t(`project${index+1}.description`)} />
-        <meta property="og:image" content={`https://s3-alpha-sig.figma.com/img/f623/c076/3e44f1f94c12c84dfbd59bdf89427ba3?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kSJZiA2KVMKAC~eNEV7I29PwqHhGi7wXuCK3NLBKOeTg0U16V7lvr7H1kqNrDh5sM3-tgXRUbRb96sI4DjKymwSp9SeYLQ7QMtJY0KSmOXXMlgxVHjgcipX17MwDaBpplTiMH6gD66lyRatQ85p~LMWlP4ATQdbf7NN4G7SaOW~XBTSI4cTPun23KnzPhXyLhO9uYXLAtPdZ7PZo07iliODCmjshYnrOFYqDytmQezxU9bAFcOTbDZIR7sp9UEXu5bhiUk4FAHhg04PmM57UW5rBxYSvvMd~aQRp3bCwtn6XsKx2bchOPuysvS2gyeZiMAC3UM5VSSp6XAnE9GBegQ__`} />
+        <meta property="og:image" content="https://s3-alpha-sig.figma.com/img/f623/c076/3e44f1f94c12c84dfbd59bdf89427ba3?Expires=1716163200&amp;Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&amp;Signature=kSJZiA2KVMKAC~eNEV7I29PwqHhGi7wXuCK3NLBKOeTg0U16V7lvr7H1kqNrDh5sM3-tgXRUbRb96sI4DjKymwSp9SeYLQ7QMtJY0KSmOXXMlgxVHjgcipX17MwDaBpplTiMH6gD66lyRatQ85p~LMWlP4ATQdbf7NN4G7SaOW~XBTSI4cTPun23KnzPhXyLhO9uYXLAtPdZ7PZo07iliODCmjshYnrOFYqDytmQezxU9bAFcOTbDZIR7sp9UEXu5bhiUk4FAHhg04PmM57UW5rBxYSvvMd~aQRp3bCwtn6XsKx2bchOPuysvS2gyeZiMAC3UM5VSSp6XAnE9GBegQ__" />
         <meta property="og:locale" content="ru_RU" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="irinagrave.ru" />
