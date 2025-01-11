@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
-import { extra } from '../api/data/extra'
+import { extra } from '../../pages/api/data/extra'
 import Error from 'next/error'
 import Image from 'next/image'
 import Header from '@/app/UI/header/Header'
@@ -15,6 +15,29 @@ import galleryCross from '../../../public/images/gallery-cross.svg'
 import { useTranslation } from 'next-i18next'
 import Head from 'next/head'
 
+export async function getServerSideProps(context) {
+  const { name } = context.query
+  const urls = extra.map((page) => page.name)
+  const names = urls.map((url) => {
+    const parts = url.split('/')
+    return parts[parts.length - 1]
+  })
+
+  if (!names.includes(name)) {
+    return { notFound: true }
+  }
+
+  const index = names.indexOf(name)
+  const matchedObject = extra[index]
+
+  return {
+    props: {
+      matchedObject,
+      index,
+    },
+  }
+}
+
 const Pr = () => {
   const { t } = useTranslation()
 
@@ -26,8 +49,6 @@ const Pr = () => {
     const parts = url.split('/')
     return parts[parts.length - 1]
   })
-
-  console.log(names)
 
   const [isLargeScreen, setIsLargeScreen] = useState(false)
   useEffect(() => {
@@ -95,12 +116,15 @@ const Pr = () => {
   }
 
   const goToPreviousProject = () => {
-    const prevIndex = index === 0 ? extra.length - 1 : index - 1
+    const prevIndex =
+      index === 0 ? extra.length - 1 : index - 1
     router.push({
       pathname: '/residential-design/[name]',
       query: { name: names[prevIndex] },
     })
   }
+
+  console.log(index + 2 > extra.length)
 
   return (
     <div>
@@ -145,7 +169,6 @@ const Pr = () => {
             </div>
           </div>
 
-          {/* Условный рендеринг в зависимости от ширины экрана */}
           <div
             style={{ display: 'flex', justifyContent: 'center' }}
             className={classes.keen}
@@ -217,19 +240,45 @@ const Pr = () => {
               />
             </div>
           )}
-
-          {/* <div className={classes.navigationButtons}>
-            <div className={classes.prevProjectButton} onClick={goToPreviousProject}>
-              <Image className={classes.arrowProjectButtonPrevious} src={arrow} alt="arrow prev"/>
+{/*           
+          <div className={classes.navigationButtons}>
+            <div
+              className={classes.prevProjectButton}
+              onClick={goToPreviousProject}
+            >
+              <Image
+                className={classes.arrowProjectButtonPrevious}
+                src={arrow}
+                alt='arrow prev'
+              />
               <div className={classes.projectButtonText}>
-                <div>{t(`project${(index - 1 + extra.length) % extra.length}.title`)}</div>
+                <div>
+                  {t(
+                    `project${
+                      index === 0 ? extra.length : index 
+                    }.title`
+                  )}
+                </div>
                 <div>{t(`prevProject`)}</div>
               </div>
             </div>
-            <div className={classes.nextProjectButton} onClick={goToNextProject}>
-              <Image className={classes.arrowProjectButtonNext} src={arrow} alt='arrow next' />
+            <div
+              className={classes.nextProjectButton}
+              onClick={goToNextProject}
+            >
+              <Image
+                className={classes.arrowProjectButtonNext}
+                src={arrow}
+                alt='arrow next'
+              />
               <div className={classes.projectButtonText}>
-                <div>{t(`project${(index + 1 + extra.length) % extra.length}.title`)}</div>
+                <div>
+                  {t(
+                    `project${
+                      index + 2 > extra.length ? 1 : index + 2
+                    }.title`
+                  )}
+                </div>
                 <div>{t(`nextProject`)}</div>
               </div>
             </div>
