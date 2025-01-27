@@ -256,6 +256,7 @@
   }
   .descriptionSection h1 {
     font-size: 50px;
+    line-height: normal;
     height: 200px;
   }
   .descriptionSection p {
@@ -278,7 +279,7 @@
     background-size: 400%;
   }
   .banner p {
-    margin: 0 13;
+    margin: 0 13px;
     text-align: unset;
   }
   .brands {
@@ -290,6 +291,7 @@
   .descriptionSection h1 {
     font-size: 40px;
     height: 200px;
+    line-height: 50px;
     /* text-shadow: 0px 0px 20px black; */
   }
   .descriptionSection p {

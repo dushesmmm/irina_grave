@@ -127,7 +127,7 @@
 
 .doubleProjects {
   width: 728px;
-  height: 700;
+  height: 700px;
   margin-bottom: 50px;
   position: relative;
 }
@@ -184,4 +184,19 @@
   transition: all 1s ease;
   overflow: hidden;
   pointer-events: none;
+}
+
+@media (max-width: 1700px) {
+  .wrapper {
+    /* margin-right: 0;
+    margin-left: 0; */
+    justify-content: space-around;
+  }
+  .doubleWrapper {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .title {
+    height: 100px;
+  }
 }

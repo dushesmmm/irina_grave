@@ -18,7 +18,6 @@ const Gallery = ({ projects }) => {
 
   const { t } = useTranslation();
 
-  // Reverse the projects array
   const reversedProjects = [...projects].reverse();
 
   return (
