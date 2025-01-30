@@ -18,7 +18,7 @@
 }
 
 .video {
-  width: 54%;
+  width: 1100px;
   height: auto;
 }
 
@@ -47,7 +47,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 55%;
+  width: 1100px;
   justify-content: space-between;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .quote {
-  width: 55%;
+  width: 1100px;
 }
 
 .quote h2 {
@@ -130,4 +130,73 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.item {
+  margin-top: 40px;
+}
+
+@media (max-width: 1500px) {
+  .fullImage {
+    width: 95vw;
+    height: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .video {
+    width: 850px;
+  }
+  .wrapper {
+    width: 850px;
+  }
+  .quote {
+    width: 850px;
+  }
+  .item {
+    margin-top: 20px;
+  }
+  .item img{
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .video {
+    width: 90%;
+    max-width: 600px;
+  }
+  .wrapper {
+    max-width: 550px;
+    width: 90%;
+  }
+  .quote {
+    width: 90%;
+    max-width: 550px;
+  }
+  .quote h2 {
+    font-size: 24px;
+  }
+  .quote p {
+    font-size: 13px;
+  }
+  .playIcon {
+    width: 75%;
+    height: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .item img{
+    width: 175px;
+    height: auto;
+  }
+  .item {
+    margin-top: 10px;
+  }
+  .fullImage {
+    width: 95vw;
+    height: auto;
+  }
 }
