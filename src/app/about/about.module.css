@@ -1,113 +1,8 @@
-.wrapper {
-  display: flex;
-  justify-content: center;
-}
-
 .container {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.videoWrapper {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  margin-top: 80px;
-}
-
-.video {
-  width: 1100px;
-  height: auto;
-}
-
-.overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  z-index: 2;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.playIcon {
-  color: white;
-  font-size: 64px;
-}
-
-.wrapper {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 1100px;
-  justify-content: space-between;
-}
-
-/* .wrapper::after {
-  content: '';
-  width: 250px;
-} */
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modalContent {
-  /* position: relative;
-    max-width: 80%;
-    max-height: 80%; */
-}
-
-.closeIcon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
-
-.fullImage {
-  height: 96vh;
-  width: auto;
-  user-select: none;
-}
-
-.arrow {
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-}
-
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90vw;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
 }
 
 .quote {
@@ -132,45 +27,13 @@
   line-height: normal;
 }
 
-.item {
-  margin-top: 40px;
-}
-
-@media (max-width: 1500px) {
-  .fullImage {
-    width: 95vw;
-    height: auto;
-  }
-}
-
 @media (max-width: 1200px) {
-  .video {
-    width: 850px;
-  }
-  .wrapper {
-    width: 850px;
-  }
   .quote {
     width: 850px;
-  }
-  .item {
-    margin-top: 20px;
-  }
-  .item img{
-    width: 200px;
-    height: auto;
   }
 }
 
 @media (max-width: 900px) {
-  .video {
-    width: 90%;
-    max-width: 600px;
-  }
-  .wrapper {
-    max-width: 550px;
-    width: 90%;
-  }
   .quote {
     width: 90%;
     max-width: 550px;
@@ -180,23 +43,5 @@
   }
   .quote p {
     font-size: 13px;
-  }
-  .playIcon {
-    width: 75%;
-    height: auto;
-  }
-}
-
-@media (max-width: 500px) {
-  .item img{
-    width: 175px;
-    height: auto;
-  }
-  .item {
-    margin-top: 10px;
-  }
-  .fullImage {
-    width: 95vw;
-    height: auto;
   }
 }

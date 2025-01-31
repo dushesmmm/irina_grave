@@ -1,115 +1,49 @@
-'use client'
-
-import React, { useState } from 'react'
-import Image from 'next/image'
-import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa'
+import React from 'react'
 import classes from './about.module.css'
-import play from '../../../public/images/about us/play.svg'
-import { mags } from '@/pages/api/data/mags'
+import Cover from '../UI/cover/Cover'
+import Video from '../UI/video/Video'
+
+export const metadata = {
+  title: "Irina Grave - About us",
+  description:
+    "Ирина Граве - дипломированный дизайнер, с отличием окончила школу «Детали». Занимается дизайном частных и общественных интерьеров. В основе её работы над каждым проектом лежит архитектура пространства и специфика образа жизни конкретного заказчика. Ирина ведет авторский надзор за осуществлением ремонтно-строительных работ. Все проекты осуществляются 'под ключ' : начиная от планировочных решений и заканчивая подбором текстиля и аксессуаров.",
+  icon: "./favicon.ico",
+  openGraph: {
+    title: "Irina Grave",
+    description:
+      'Ирина Граве - дипломированный дизайнер, с отличием окончила школу «Детали». Занимается дизайном частных и общественных интерьеров. В основе её работы над каждым проектом лежит архитектура пространства и специфика образа жизни конкретного заказчика. Ирина ведет авторский надзор за осуществлением ремонтно-строительных работ. Все проекты осуществляются "под ключ" : начиная от планировочных решений и заканчивая подбором текстиля и аксессуаров.',
+    url: "https://irinagrave.ru",
+    siteName: "irinagrave.ru",
+    images: [
+      {
+        url: "https://s3-alpha-sig.figma.com/img/f623/c076/3e44f1f94c12c84dfbd59bdf89427ba3?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kSJZiA2KVMKAC~eNEV7I29PwqHhGi7wXuCK3NLBKOeTg0U16V7lvr7H1kqNrDh5sM3-tgXRUbRb96sI4DjKymwSp9SeYLQ7QMtJY0KSmOXXMlgxVHjgcipX17MwDaBpplTiMH6gD66lyRatQ85p~LMWlP4ATQdbf7NN4G7SaOW~XBTSI4cTPun23KnzPhXyLhO9uYXLAtPdZ7PZo07iliODCmjshYnrOFYqDytmQezxU9bAFcOTbDZIR7sp9UEXu5bhiUk4FAHhg04PmM57UW5rBxYSvvMd~aQRp3bCwtn6XsKx2bchOPuysvS2gyeZiMAC3UM5VSSp6XAnE9GBegQ__",
+        width: 800,
+        height: 600,
+      },
+      {
+        url: "https://s3-alpha-sig.figma.com/img/f623/c076/3e44f1f94c12c84dfbd59bdf89427ba3?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kSJZiA2KVMKAC~eNEV7I29PwqHhGi7wXuCK3NLBKOeTg0U16V7lvr7H1kqNrDh5sM3-tgXRUbRb96sI4DjKymwSp9SeYLQ7QMtJY0KSmOXXMlgxVHjgcipX17MwDaBpplTiMH6gD66lyRatQ85p~LMWlP4ATQdbf7NN4G7SaOW~XBTSI4cTPun23KnzPhXyLhO9uYXLAtPdZ7PZo07iliODCmjshYnrOFYqDytmQezxU9bAFcOTbDZIR7sp9UEXu5bhiUk4FAHhg04PmM57UW5rBxYSvvMd~aQRp3bCwtn6XsKx2bchOPuysvS2gyeZiMAC3UM5VSSp6XAnE9GBegQ__",
+        width: 1800,
+        height: 1600,
+        alt: "Irina ",
+      },
+    ],
+    locale: "ru_RU",
+    type: "website",
+  },
+};
 
 const About = () => {
-  const [isPlaying, setIsPlaying] = useState(false)
-  const [selectedImages, setSelectedImages] = useState([])
-  const [currentImageIndex, setCurrentImageIndex] = useState(null)
-
-  const handlePlay = () => {
-    const videoElement = document.getElementById('about-video')
-    if (videoElement) {
-      videoElement.play()
-      setIsPlaying(true)
-    }
-  }
-
-  const openModal = (images) => {
-    if (images && images.length > 0) {
-      setSelectedImages(images)
-      setCurrentImageIndex(0)
-    }
-  }
-
-  const closeModal = () => {
-    setSelectedImages([])
-    setCurrentImageIndex(null)
-  }
-
-  const showNext = () => {
-    if (currentImageIndex !== null && selectedImages.length > 1) {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % selectedImages.length)
-    }
-  }
-
-  const showPrev = () => {
-    if (currentImageIndex !== null && selectedImages.length > 1) {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === 0 ? selectedImages.length - 1 : prevIndex - 1
-      )
-    }
-  }
 
   return (
     <div className={classes.container}>
-      <div className={classes.videoWrapper}>
-        {!isPlaying && (
-          <div className={classes.overlay} onClick={handlePlay}>
-            <Image alt="старт видео" src={play} className={classes.playIcon} />
-          </div>
-        )}
-        <video
-          id="about-video"
-          className={classes.video}
-          preload="true"
-          controls={isPlaying}
-          poster="/images/about us/prev.jpg"
-        >
-          <source src="/images/about us/video-irina-grave.mp4" type="video/mp4" />
-        </video>
-      </div>
-
+      <Video />
       <div className={classes.quote}>
         <h2>“Дизайнер Ирина Граве детально, с любовью прорабатывает  пространства, показывая высокий уровень мастерства.”</h2>
         <p>-   INTERIOR+DESIGN</p>
       </div>
-
-      <div className={classes.wrapper}>
-        {mags.slice().reverse().map((item) => (
-          <div key={item.id} className={classes.item}>
-            <Image
-              src={item.cover}
-              alt={`Обложка журнала ${item.id}`}
-              onClick={() => openModal(item.full)}
-              width={250}
-              height={350}
-              style={{ cursor: 'pointer' }}
-              quality={100}
-            />
-          </div>
-        ))}
+      <Cover />
       </div>
+      )
+    }
 
-      {currentImageIndex !== null && (
-        <div className={classes.modal}>
-          <div className={classes.modalContent}>
-            <FaTimes className={classes.closeIcon} onClick={closeModal} />
-            {selectedImages[currentImageIndex] && (
-              <Image
-                src={selectedImages[currentImageIndex]}
-                alt={`Изображение ${currentImageIndex + 1}`}
-                className={classes.fullImage}
-                width={1300}
-                height={800}
-              />
-            )}
-            {selectedImages.length > 1 && (
-              <div className={classes.navigation}>
-                <FaArrowLeft className={classes.arrow} onClick={showPrev} />
-                <FaArrowRight className={classes.arrow} onClick={showNext} />
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-    </div>
-  )
-}
-
-export default About
+export default About;
