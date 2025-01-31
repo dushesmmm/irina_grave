@@ -64,6 +64,11 @@
   .item {
     margin-top: 40px;
   }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
   @media (max-width: 1500px) {
     .fullImage {

@@ -51,8 +51,7 @@
   
   @media (max-width: 900px) {
     .video {
-      width: 90%;
-      max-width: 600px;
+      width: 120%;
     }
     .playIcon {
       width: 75%;

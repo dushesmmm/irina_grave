@@ -39,7 +39,7 @@ const Cover = () => {
       }
 
   return (
-    <div>
+    <div className={classes.container}>
         <div className={classes.wrapper}>
         {mags.slice().reverse().map((item) => (
           <div key={item.id} className={classes.item}>
